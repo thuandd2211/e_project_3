@@ -642,6 +642,78 @@ header .nav-col .navbad li a {
 	}
 }
 
+
+/* Thuan */
+.what-we-do {
+  background-color: #edf1f5;
+  padding: 50px;
+}
+
+.what-we-do .natur-row {
+  margin-top: 20px;
+}
+.what-we-do .text-part h1 {
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.what-we-do .text-part p {
+  /*text-indent: 20px;*/
+  padding-right: 30px;
+  margin-bottom: 15px;
+  line-height: 30px;
+  font-weight: 350;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.our-team {
+  background-color: #edf1f5;
+  padding: 50px;
+}
+
+.our-team .natur-row {
+  margin-top: 20px;
+}
+
+.our-team .text-part img{
+  width: 300px !important;
+  height: 400px !important;
+}
+
+.our-team .text-part .bio{
+  width: 70%;
+  height: fit-content;
+  border: 1px solid rgb(216, 204, 204);
+  border-left: none;
+  border-right: none;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.our-partner {
+  background-color: #edf1f5;
+  padding: 50px;
+}
+
+.our-partner  .natur-row {
+  margin-top: 20px;
+}
+.our-partner  .text-part h1 {
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.our-partner .text-part img{
+  width: 300px !important;
+  height: 200px !important;
+}
+
 /*END HERE/
 
 
@@ -856,19 +928,27 @@ header .small-menu {
   margin-top: 20px;
 }
 
-.about-us .text-part h2 {
+.about-us .text-part h1 {
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
-.about-us .text-part p {
-  text-indent: 20px;
-  margin-bottom: 15px;
-  line-height: 27px;
+.about-us .text-part h2 {
   font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  vertical-align: middle;
+}
+
+.about-us .text-part p {
+  /*text-indent: 20px;*/
+  padding-right: 30px;
+  margin-bottom: 15px;
+  line-height: 30px;
+  font-weight: 350;
   text-align: justify;
-  font-size: .9rem;
+  font-size: 1.2rem;
 }
 
 .about-us .image-part .about-quick-box .about-qcard {
