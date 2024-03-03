@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/donate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-rS5P+4dPJvPAdRL2AJ5HHCK7DkSbHH5PksR2J5fuL5u8szc3T/cY+YLGvzN3/fVu" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -75,66 +79,182 @@
         </div>
     </header>
     <!-- ******************** Donate here ******************* -->
-    <div class="container-fluid donate">
-        <div class="container">
+
+    <body>
+        <div class="donate-detail">
+            <div class="title">
+                <img src="assets/images/donate/donate.png" alt="" class="w-100">
+                <p>Empower Teachers, Inspire Future </p>
+                <p>Innovators: Support the RISE Program </p>
+                <p>in the Philippines, May 2024</p>
+            </div>
+        </div>
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-7">
-                    <div class="mv-img">
-                        <img src="assets/images/donate.jpg" alt="">
+                <div class="col-md-8">
+                    <h1 class="text-center">Donation Details</h1>
+                    <div class="donate-once">
+                        <h2>Donate Once</h2>
 
-                        <div class="donate-detail">
-                            <div class="title">
-                                <h1>DONATION DETAILS</h1>
-                            </div>
-                            <div class="description">
-                                <form action="">
-                                    <h3>DONATION AMOUNT</h3>
-                                    <div class="wrapper">
-                                        <input type="radio" name="select" id="option-1" checked>
-                                        <input type="radio" name="select" id="option-2">
-                                          <label for="option-1" class="option option-1">
-                                            <div class="dot"></div>
-                                             <span>Student</span>
-                                             </label>
-                                          <label for="option-2" class="option option-2">
-                                            <div class="dot"></div>
-                                             <span>Teacher</span>
-                                          </label>
-                                       </div>
-                                    <!-- <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">$</span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Custom amount"
-                                            aria-label="Username" aria-describedby="basic-addon1">
-                                    </div> -->
-                                </form>
+                        <form>
+                            <label for="amount-once">Once Donation Amount:</label>
+                            <input type="text" id="amount-once" name="amount-once">
+                            <label for="amount-monthly">Monthly Donation Amount:</label>
+                            <input type="text" id="amount-monthly" name="amount-monthly">
 
-                            </div>
-                        </div>
+                            <label for="cause-once">Cause:</label>
+                            <select id="cause-once" name="cause-once">
+                                <option value="children">Children</option>
+                                <option value="education">Education</option>
+                                <option value="disabled">Disabled</option>
+                                <option value="woman">Woman</option>
+                                <option value="youth">Youth</option>
+                                <option value="elderly">Elderly</option>
+                            </select>
+
+
+                        </form>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus
-                        ligula non congue. Suspendisse at pretium massa, sit amet
-                        vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl </p>
-                    <p> Cras faucibus laoreet nibh, sit amet tincidunt leo mollis in. Etiam eu mauris metus.
-                        Nulla facilisi. Etiam vestibulum,
-                        nisi et convallis elementum, leo orci aliquam metus, id posuere massa neque vitae
-                        arcu.</p>
-
-                    <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum sapien,
-                        eget tempor justo. Aenean porttitor nibh metus, sollicitudin egestas metus posuere et
-                        . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit
-                        amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at
-                        dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in,
-                        dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida
-                        vestibulum, urna justo posuere ante,
-                        id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus </p>
+                <div class="col-md-4">
+                    <img src="assets/images/donate/donate1.png" alt="" class="img-fluid">
+                    <p>Inspire the Next Generation of Problem Solvers in First Nations Communities: Support Our STEM
+                        Enrichment in Indigenous Communities Program </p>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>DONOR & TAX RECEIPT INFORMATION</h1>
+                    <form action="submit_form.php" method="post">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="col">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+
+                        <label for="country">Select Country:</label>
+                        <select id="country" name="country" required>
+                            <!-- Add your list of countries here -->
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                            <!-- Add more options as needed -->
+                        </select>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/donate/donate2.jpeg" alt="" class="img-fluid">
+                    <p>Help us forge well-rounded scientists and engineers who will have the knowhow and experience to
+                        promote STEM education throughout their lives</p>
+                    <img src="assets/images/donate/donate5.jpeg" alt="" class="img-fluid">
+                    <p>Give a child an e-book and help us inspire the next generation of innovators</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Payment Information</h2>
+
+                        <div class="payment-methods">
+                            <div class="payment-method" onclick="showPaymentInfo('credit-card-info')">Credit Card</div>
+                        </div>
+
+                        <div id="credit-card-info" class="payment-info">
+                            <label for="credit-card-number">Credit Card Number:</label>
+                            <input type="text" id="credit-card-number" name="credit-card-number" required>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="expiry">Expiry (MM/YY):</label>
+                                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                                </div>
+                                <div class="col">
+                                    <label for="cvv">CVV:</label>
+                                    <input type="text" id="cvv" name="cvv" required>
+                                </div>
+                            </div>
+                                    <label for="name-on-card">Name on Card:</label>
+                                    <input type="text" id="name-on-card" name="name-on-card" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-success">Complete Donation Now</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="assets/images/donate/donate6.jpeg" alt="" class="img-fluid">
+                                <p>Make a gift of cryptocurrency to Pueblo Science and help us inspire the next
+                                    generation of
+                                    innovators and problem solvers!</p>
+                            </div>
+                        </div>
+
+
+                        <script>
+                            function showPaymentInfo(paymentType) {
+                                // Hide all payment info sections
+                                var paymentInfos = document.querySelectorAll('.payment-info');
+                                paymentInfos.forEach(function (info) {
+                                    info.style.display = 'none';
+                                });
+
+                                // Show the selected payment info section
+                                var selectedInfo = document.getElementById(paymentType);
+                                if (selectedInfo) {
+                                    selectedInfo.style.display = 'block';
+                                }
+                            }
+                        </script>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h1>Transforming Lives Through STEM Education</h1>
+                                    <p>John Dale Ramos first experienced a chemistry experiment during Pueblo's visit to
+                                        his
+                                        province in Ilocos Norte, Philippines. At the age of 10, he enthusiastically
+                                        joined
+                                        a group of 40 teachers and students to explore ways of making science engaging
+                                        with
+                                        minimal resources. Living in rural Philippines, he found joy in creating slime
+                                        and
+                                        crafting batteries from fruits.
+
+                                        Inspired by this early exposure to science, John Dale later became a volunteer
+                                        and
+                                        then an instructor for Pueblo Science's science camps. His involvement motivated
+                                        him
+                                        to pursue a STEM degree at the university level. In 2020, he successfully
+                                        completed
+                                        his Bachelor's degree and obtained a license as a Chemical Engineer. Currently
+                                        employed as an engineer at JGC Philippines, he has plans to pursue graduate
+                                        studies
+                                        while remaining committed to advocating STEM education for children. </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="assets/images/donate/donate3.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+    </body>
+
+
+
+
 
     <footer class="footer">
         <div class="container">
