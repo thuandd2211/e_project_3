@@ -351,7 +351,7 @@ body {
 
 /* =========================CSS FORM========================= */
 
-.container-sign{
+.container-sign {
   position: relative;
   max-width: 850px;
   width: 100%;
@@ -363,7 +363,8 @@ body {
   background-clip: padding-box;
   border-radius: 10px;
 }
-.container-sign .cover{
+
+.container-sign .cover {
   position: absolute;
   top: 0;
   left: 50%;
@@ -374,18 +375,21 @@ body {
   transform-origin: left;
   transform-style: preserve-3d;
 }
-.container-sign #flip:checked ~ .cover{
+
+.container-sign #flip:checked~.cover {
   transform: rotateY(-180deg);
 }
- .container-sign .cover .front,
- .container-sign .cover .back{
+
+.container-sign .cover .front,
+.container-sign .cover .back {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
 }
-.cover .back{
+
+.cover .back {
   transform: rotateY(180deg);
   backface-visibility: hidden;
 }
@@ -407,7 +411,7 @@ body {
 }
 
 .container-sign .cover::before,
-.container-sign .cover::after{
+.container-sign .cover::after {
   content: '';
   position: absolute;
   height: 100%;
@@ -415,39 +419,46 @@ body {
   opacity: 0.5;
   z-index: 12;
 }
-.container-sign .cover::after{
+
+.container-sign .cover::after {
   opacity: 0.3;
   transform: rotateY(180deg);
   backface-visibility: hidden;
 }
-.container-sign .cover img{
+
+.container-sign .cover img {
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
   z-index: -10;
 }
-.container-sign .forms{
+
+.container-sign .forms {
   height: 100%;
   width: 100%;
   background: #fff;
 }
-.container-sign .form-content{
+
+.container-sign .form-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .form-content .login-form,
-.form-content .signup-form{
+.form-content .signup-form {
   width: calc(100% / 2 - 25px);
 }
-.forms .form-content .title{
+
+.forms .form-content .title {
   position: relative;
   font-size: 24px;
   font-weight: 500;
   color: #333;
 }
-.forms .form-content .title:before{
+
+.forms .form-content .title:before {
   content: '';
   position: absolute;
   left: 0;
@@ -456,13 +467,16 @@ body {
   width: 25px;
   background: #3bbd57;
 }
-.forms .signup-form  .title:before{
+
+.forms .signup-form .title:before {
   width: 20px;
 }
-.forms .form-content .input-boxes{
+
+.forms .form-content .input-boxes {
   margin-top: 30px;
 }
-.forms .form-content .input-box{
+
+.forms .form-content .input-box {
   display: flex;
   align-items: center;
   height: 50px;
@@ -470,7 +484,8 @@ body {
   margin: 10px 0;
   position: relative;
 }
-.form-content .input-box input{
+
+.form-content .input-box input {
   height: 100%;
   width: 100%;
   outline: none;
@@ -478,34 +493,41 @@ body {
   padding: 0 30px;
   font-size: 16px;
   font-weight: 500;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
+
 .form-content .input-box input:focus,
-.form-content .input-box input:valid{
+.form-content .input-box input:valid {
   border-color: #3bbd57;
 }
-.form-content .input-box i{
+
+.form-content .input-box i {
   position: absolute;
   color: #3bbd57;
   font-size: 17px;
 }
-.forms .form-content .text{
+
+.forms .form-content .text {
   font-size: 14px;
   font-weight: 500;
   color: #333;
 }
-.forms .form-content .text a{
+
+.forms .form-content .text a {
   text-decoration: none;
 }
-.forms .form-content .text a:hover{
+
+.forms .form-content .text a:hover {
   text-decoration: underline;
 }
-.forms .form-content .button{
+
+.forms .form-content .button {
   color: #fff;
   margin-top: 40px;
 }
-.forms .form-content .button input{
+
+.forms .form-content .button input {
   color: #fff;
   background: #3bbd57;
   border-radius: 6px;
@@ -513,39 +535,49 @@ body {
   cursor: pointer;
   transition: all 0.4s ease;
 }
-.forms .form-content .button input:hover{
+
+.forms .form-content .button input:hover {
   background: #3bbd57;
 }
-.forms .form-content label{
+
+.forms .form-content label {
   color: #3bbd57;
   cursor: pointer;
 }
-.forms .form-content label:hover{
+
+.forms .form-content label:hover {
   text-decoration: underline;
 }
+
 .forms .form-content .login-text,
-.forms .form-content .sign-up-text{
+.forms .form-content .sign-up-text {
   text-align: center;
   margin-top: 25px;
 }
-.container-sign #flip{
+
+.container-sign #flip {
   display: none;
 }
+
 @media (max-width: 730px) {
-  .container-sign .cover{
+  .container-sign .cover {
     display: none;
   }
+
   .form-content .login-form,
-  .form-content .signup-form{
+  .form-content .signup-form {
     width: 100%;
   }
-  .form-content .signup-form{
+
+  .form-content .signup-form {
     display: none;
   }
-  .container-sign #flip:checked ~ .forms .signup-form{
+
+  .container-sign #flip:checked~.forms .signup-form {
     display: block;
   }
-  .container-sign #flip:checked ~ .forms .login-form{
+
+  .container-sign #flip:checked~.forms .login-form {
     display: none;
   }
 }
@@ -567,6 +599,7 @@ body {
   min-width: 140px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
+  border-radius: 20px;
 }
 
 .dropdown-content a {
@@ -577,8 +610,9 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1 !important;
+  background-color: white !important;
   color: black !important;
+  border: 2px solid #ffffff67 !important;
 }
 
 .dropdown:hover .dropdown-content {
@@ -586,24 +620,23 @@ body {
 }
 
 
-.donatebtn {
+.login-btn {
   align-items: center;
-  background-clip: padding-box;
-  background-color: #3bbd57;
+  /* background-clip: padding-box; */
   border: 1px solid transparent;
   border-radius: 18.25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #3eca5c;
   cursor: pointer;
   display: inline-flex;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
-  margin: 8px 0px 0px 0px;
+  margin: 13px 0px 0px 0px;
   min-height: 3rem;
-  padding: calc(1rem - 1px) calc(1.9rem - 1px);
+  padding: calc(0rem - 1px) calc(2rem - 1px);
   position: relative;
   text-decoration: none;
   transition: all 250ms;
@@ -612,23 +645,27 @@ body {
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+  border: 2px solid #3eca5c;
 }
 
-.donatebtn:hover,
-.donatebtn:focus {
+.login-btn:hover,
+.login-btn:focus {
   background-color: #3eca5c;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: white;
 }
 
-.donatebtn:hover {
+.login-btn:hover {
   transform: translateY(-1px);
 }
 
-.donatebtn:active {
+.login-btn:active {
   background-color: #38af52;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
-} 
+}
+
+
 
 /* Header CSS END*/
 
@@ -683,7 +720,7 @@ body {
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
-  margin: 23px 0px 0px 0px;
+  margin: 13px 0px 0px 0px;
   min-height: 3rem;
   padding: calc(.875rem - 1px) calc(1.5rem - 1px);
   position: relative;
@@ -1050,6 +1087,7 @@ header .header-top .btn-bhed .btn {
 header .header-bottom {
   padding: 6px;
   background-color: #fff;
+  border-bottom: 2px solid #38af52;
 }
 
 @media screen and (max-width: 991px) {
@@ -1079,7 +1117,7 @@ header .nav-col .navbad {
 
 /*Change lenth of header navbar*/
 header .nav-col .navbad li {
-  padding: 15px 9px;
+  padding: 16px 10px;
   font-weight: 700;
   font-size: .9rem;
   float: left;
@@ -1101,13 +1139,14 @@ header .nav-col .navbad li {
 
 header .nav-col .navbad li a {
   color: #070707c2;
+  padding: 12px 22px 12px 22px;
 
 }
 
 /* style header navbar hover */
 header .nav-col .navbad li a:hover {
-  background-color: #b7cadd3b;
-  /* color: #ffffff; */
+  border: 2px solid #3eca5c;
+  padding: 10px 20px 10px 20px;
   border-radius: 20px;
   background-clip: padding-box;
 }
