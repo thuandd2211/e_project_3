@@ -346,6 +346,44 @@ body {
 
 /* =================== Project CSS Starts Here =================== */
 
+/*le Dat CSS*/
+/* CSS Blog Detail */
+.blog-detail-h6 {
+  text-align: center;
+}
+
+.blog-detail-h1 {
+  text-align: center;
+  color: #38af52;
+}
+
+.blog-detail-h5 {
+  font-size: 24px;
+  word-wrap: break-word;
+  line-height: 49px;
+  padding: 0px 30px 0px 30px;
+}
+
+.blog-detail-p {
+  font-size: 20px;
+  word-wrap: break-word;
+  text-indent: 40px;
+  padding: 0px 30px 0px 30px;
+}
+
+.blog-detail-img {
+  margin-bottom: 20px;
+}
+
+.blog-detail-p2 {
+  font-size: 20px;
+}
+
+
+/* Le Dat CSS End */
+
+
+
 /* Giang Thanh CSS */
 
 
@@ -584,6 +622,234 @@ body {
 
 /* Giang Thanh CSS */
 
+/* ============================CSS Our Work============================ */
+
+
+
+
+.content-img-holder img {
+  margin: 20px 20px 20px 20px;
+  max-width: 300px;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.our-work-text p{
+    font-size: 25px;
+    color: #000000;
+    padding-bottom: 20px;
+    line-height: 35px;
+    font-weight: 350;
+}
+
+.our-work-text {
+  padding-bottom: 30px;
+}
+
+.example-test {
+  background-color: #ceedd5;
+}
+
+.our-work-body {
+  margin-top: 0px;
+}
+
+.our-work-text h1{
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-size: 50px;
+  color: #000000;
+}
+
+.our-work-img img{
+  width: 100%;
+  height: auto;
+  margin-top: 83px;
+}
+
+.under-img img{
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  margin: 0 30px 80px 0;
+}
+
+.card-our-work {
+    width: 23rem;
+    margin: 50px 10px 70px 10px;
+    border: #b8e9c2 1px solid;
+    border-radius: 20px;
+    box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+}
+
+.title-change h1{
+  padding-top: 37px;
+  padding-bottom: 40px;
+  font-size: 50px;
+  color: #000000;
+  text-align: center;
+  margin: auto;
+}
+
+.title-change p {
+  font-size: 25px;
+  color: #000000;
+  line-height: 35px;
+  font-weight: 350;
+  text-align: center;
+}
+
+.img-top {
+  width: 100%;
+  border-top-left-radius: calc(1.5rem - 10px);
+  border-top-right-radius: calc(1.5rem - 10px);
+}
+
+.our-work-text img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding-bottom: 50px;
+}
+
+.text-1 h1{
+  color: #8ef2a2;
+  font-weight: 650;
+}
+
+.text-1 {
+  padding-bottom: 30px;
+}
+
+.text-2 h1{
+  font-weight: 650;
+}
+
+.text-impact {
+  padding: 200px 10px 0 50px;
+}
+
+.text-impact p {
+  font-size: 20px;
+}
+
+
+
+
+/* ============================CSS Contact============================ */
+
+.container-content {
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form {
+  margin: auto;
+  padding: 30px 0 50px 50px;
+}
+
+.container-content h1 {
+  color: #000000;
+  text-align: center;
+  padding-top: 50px;
+  
+}
+
+.contact-title {
+  position: relative;
+}
+
+.contact-title::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 23pc;
+  right: 23pc;
+  max-width: 26%;
+  width: auto;
+  height: 5px;
+  border-radius: 2px;
+  background: linear-gradient(111.3deg, #170b26 9.6%, #31f963 93.6%);
+}
+
+.cont-row label{
+  color: #000000;
+}
+
+.serv img{
+  width: 400px;
+  height: 450px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+  border-style: none;
+  padding-top: 5px;
+}
+
+.btn{
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 18.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #3eca5c;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 13px 0px 0px 0px;
+  min-height: 3rem;
+  padding: calc(0rem - 1px) calc(2rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  border: 2px solid #3eca5c;
+  background-color: white;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #3eca5c;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgb(255, 251, 251);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  background-color: #38af52;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.row iframe{
+  margin-top: opx;
+  height: 600px;
+}
+
 /* Ha Anh*/
 
 /* Header CSS*/
@@ -600,19 +866,24 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
   border-radius: 20px;
+  right: -0.5pc;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+  font-weight: 700;
+  font-size: .9rem;
   display: block;
+  padding: 12px 22px 12px 22px;
+  border-radius: 20px;
+  background-clip: padding-box;
 }
 
 .dropdown-content a:hover {
   background-color: white !important;
   color: black !important;
   border: 2px solid #ffffff67 !important;
+  padding: 10px 20px 10px 20px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -663,6 +934,20 @@ body {
   background-color: #38af52;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
+}
+
+.user-icon {
+  margin: 14px 10px 10px 10px;
+  width: 45px;
+}
+
+.logout-icon {
+  margin: 0px 0px 2px 8px;
+  width: 25px;
+}
+
+.user-panel {
+  width: 200px;
 }
 
 
@@ -893,31 +1178,48 @@ body {
 /* Blog CSS END*/
 
 
-/* Team CSS */
-
-
-
-/* Team CSS END*/
-
-
 /* Donate CSS */
 
-/* .donate-body {
+.donate-body {
+  margin: 70px 0 0 0;
+}
+
+.donate-left-content {
+  background-color: white;
+  padding: 0;
+
+}
+
+.donate-right-content {
   background-color: white;
 }
 
-.donate-detail {
-  padding: 10px 0px 5px 10px;
-}
 
-.donate-title {
-  background-color: #1fdf48d9;
-  padding: 10px 0px 5px 10px;
+.donate-detail {
+  padding: 0px 0px 5px 0px;
+  height: auto;
+  /* margin: 0px 0px 50px 0px; */
 }
 
 .donate-title-1 {
+  background: linear-gradient(to left, #35f524, #24bbf5 100%);
+  padding: 12px 0px 8px 10px;
+}
+
+.donate-title {
   background-color: #dfdfdf;
-  padding: 10px 0px 5px 10px;
+  padding: 12px 0px 8px 10px;
+}
+
+.donate-title-2 {
+  width: 100%;
+  padding: 12px 10px 8px 10px;
+  text-align: center;
+
+}
+
+.donate-content {
+  margin: 25px 0 25px 0;
 }
 
 .donate-img {
@@ -925,18 +1227,348 @@ body {
 }
 
 .donate-text {
+  color: rgb(57 53 53);
+  font-size: 18px;
+  word-wrap: break-word;
+  text-indent: 35px;
+  line-height: 28px;
   padding: 25px 50px 25px 10px;
-} */
+}
+
+.underline-gradient-green {
+  background: linear-gradient(to left, #35f524, #24bbf5 100%);
+  background-position: 0 83%;
+  background-size: 100% 4px;
+  background-repeat: repeat-x;
+}
+
+.ammount-group {
+  margin: 10px 0 10px 0px;
+}
+
+.ammount-group-option input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+
+}
+
+.ammount-group-option input[type="radio"]:checked+label {
+  border: 2px solid #38af52;
+  color: #38af52;
+  border-radius: 5px;
+}
+
+.ammount-group-option label {
+  margin: 5px 10px 10px 0px;
+  padding: 10px 12px 10px 12px;
+  border: 2px solid #CCC;
+  color: #CCC;
+  cursor: pointer;
+  /* z-index: 90; */
+  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cus-ammount-right {
+  width: 27%;
+  padding: 5px 10px 5px 10px;
+  border: 2px solid #CCC;
+  border-radius: 5px;
+}
+
+.checkbox-form {
+  width: fit-content;
+  margin: 25px 0px 25px 0px;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .checkbox-wrapper-13 input[type=checkbox] {
+    --active: #38af52;
+    --active-inner: #fff;
+    --focus: 2px rgba(64, 254, 39, 0.3);
+    --border: #BBC1E1;
+    --border-hover: #38af52;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:disabled+label {
+    cursor: not-allowed;
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:not(.switch) {
+    width: 21px;
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:not(.switch):checked {
+    --o: 1;
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]+label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:not(.switch) {
+    border-radius: 5px;
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    transform: rotate(var(--r, 20deg));
+  }
+
+  .checkbox-wrapper-13 input[type=checkbox]:not(.switch):checked {
+    --r: 43deg;
+  }
+}
+
+.checkbox-wrapper-13 * {
+  box-sizing: inherit;
+}
+
+.checkbox-wrapper-13 *:before,
+.checkbox-wrapper-13 *:after {
+  box-sizing: inherit;
+}
+
+.checkbox-text {
+  font-size: 13px;
+}
+
+.select-campaign-box {
+  padding: 7px 30px 7px 12px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+}
+
+.secure-payment {
+  width: 100%;
+  height: auto;
+  padding: 20px 10px 0px 10px;
+}
+
+
+.payment-input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.payment-input input {
+  font-size: 15px;
+  padding: 13px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.payment-input input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+.input-ph {
+  color: #999;
+  font-size: 17px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.payment-input input:focus~.input-ph,
+.payment-input input:valid~.input-ph {
+  top: -20px;
+  font-size: 14px;
+  color: #38af52;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #38af52;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+.payment-input input:focus~.bar:before,
+.payment-input input:focus~.bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+.payment-input xinput:focus~.highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #38af52;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #38af52;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #38af52;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.credit-card-img {
+  width: 100%;
+}
+
+
 
 /* Donate CSS END*/
 
 
 /* Ha Anh END*/
 
-/* Thuan */
+/* Toan */
 .what-we-do {
-  background-color: #edf1f5;
+  background-color: #ffffff;
   padding: 50px;
+
+}
+
+.wwd-img-holder {
+  background-color: #ffffff;
+}
+
+.wwd-img {
+  height: 200px;
+  width: 200px;
 }
 
 .what-we-do .natur-row {
@@ -945,10 +1577,12 @@ body {
 
 .what-we-do .text-part h1 {
   font-weight: 600;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
 }
+
+
 
 
 .what-we-do .text-part p {
@@ -958,8 +1592,19 @@ body {
   line-height: 30px;
   font-weight: 350;
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
+
+.wwd-img-holder .text-part p {
+  padding-right: 30px;
+  margin-bottom: 15px;
+  line-height: 30px;
+  font-weight: 350;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+
 
 .our-team {
   background-color: #edf1f5;
@@ -985,6 +1630,13 @@ body {
   margin-right: 30px;
 }
 
+
+.ourmis .text-part p {
+  text-align: justify;
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+}
+
 .our-partner {
   background-color: #edf1f5;
   padding: 50px;
@@ -1006,7 +1658,7 @@ body {
   height: 200px !important;
 }
 
-/* Thuan END*/
+/* Toan END*/
 
 /* =================== Project CSS End Here =================== */
 
