@@ -26972,7 +26972,7 @@ pre[class*="language-"] {
 }
 
 .delete-button:hover {
-  color: #38af52;
+  color: #ff0b0bdb;
 }
 
 .edit-button {
@@ -26984,7 +26984,7 @@ pre[class*="language-"] {
 }
 
 .edit-button:hover {
-  color: #38af52;
+  color: #555451db;
 }
 
 .form-data-button {
@@ -27024,9 +27024,10 @@ pre[class*="language-"] {
 
 
 
-.search-box {
-  float: right;
+.search-box-input {
+  width: 87%;
 }
+
 
 .search-btn {
   border: none;
