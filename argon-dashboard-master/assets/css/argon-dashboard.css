@@ -26946,9 +26946,12 @@ pre[class*="language-"] {
 }
 
 .input-form {
-  margin: 20px;
+  margin: 15px 0;
 }
 
+.title {
+  margin: 0 !important;
+}
 
 .add-button {
   background-color: white;
@@ -26993,35 +26996,39 @@ pre[class*="language-"] {
 
 .input-form input {
   width: 100%;
-  max-width: 100%;  
-  
+  max-width: 100%;
+
+}
+
+.input-form input[type=text] {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.input-form input[type=date] {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 7px;
+  width: 60%;
+  text-align: center;
+}
+
+.select-option {
+  padding: 7px;
+  border-radius: 5px;
 }
 
 .input-form textarea {
   width: 100%;
-  max-width: 100%;  
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 .form-data-card-title {
   margin-left: auto;
   margin-right: auto;
 }
-
-.table-form {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px 0 ;
-}
-
-
-.table-form b,.table-form p {
-  border: 1px solid black;
-  border-collapse: collapse;
- padding: 10px;
- text-align: center;
- margin:0 !important;
-}
-
 
 
 .search-box-input {
@@ -27032,6 +27039,72 @@ pre[class*="language-"] {
 .search-btn {
   border: none;
   background: transparent;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  background-color: white;
+
+}
+
+.pagination a.active {
+  background-color: #38af52;
+  color: white;
+  border: 1px solid #38af52;
+}
+
+.center {
+  text-align: center;
+}
+
+.tb-body {
+  margin: 50px 0;
+  border-collapse: collapse;
+  border: 1px solid grey;
+  width: 100%;
+}
+
+.tb-body p {
+  margin: 0 !important;
+  
+}
+
+.tb-body td {
+  padding: 15px 0;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+
+
+
+.tb-stt {
+  width: 10%;
+ 
+}
+
+.tb-image {
+  width: 30%;
+  
+}
+
+.tb-name {
+  width: 40%;
+ 
+}
+
+.tb-action {
+  width: 20%;
+  
 }
 
 
