@@ -373,18 +373,349 @@ body {
 
 .blog-detail-img {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .blog-detail-p2 {
   font-size: 20px;
+  margin-top: 20px;
 }
 
 
+.your_campaign p {
+  font-size: 25px;
+}
+.your_campaign small {
+  font-size: 12px;
+}
+.your_campaign h4 {
+  font-size: 20px;
+  margin-top: 5px;
+
+}
+
+.search-your-campaign {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.search-your-campaign input[type=text] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.search-your-campaign button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-your-campaign button:hover {
+  background-color: #45a049;
+}
+
+.your_campaign .single-your_campaign {
+  margin-bottom: 20px;
+  background-color: #FFF;
+  box-shadow: rgba(50, 50, 93, 0.25) 2px 10px 8px -1px, rgba(0, 0, 0, 0.3) 0px 4px 16px 0px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.yc-footer {
+  margin: 10px 0 30px;
+}
+
+.your_campaign .single-your_campaign figure {
+  margin-bottom: 5px;
+}
+
+.read-more-your-campaign {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  /* Màu xanh lá */
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.read-more-your-campaign:hover {
+  background-color: #45a049;
+  /* Màu xanh lá nhạt khi di chuột qua */
+}
+
+/*CSS campaign_detail*/
+/* CSS for donate button */
+.donate-button {
+  text-align: center;
+}
+
+.donate-button button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.donate-button button:hover {
+  background-color: #45a049;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiệu ứng khi nhấn */
+.donate-button button:active {
+  transform: translateY(2px);
+  /* Dịch chuyển xuống khi nhấn */
+}
+
+.campaign-row {
+  padding: 15px;
+}
 /* Le Dat CSS End */
 
 
 
 /* Giang Thanh CSS */
+
+/* =========================CSS Search-Blog========================= */
+
+.search-blog {
+  padding-bottom: 75px;
+}
+
+/* =========================CSS DropDown========================= */
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 55px;
+}
+
+.dropbtn:hover {
+  border: 1px solid #4CAF50;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-search {
+  position: relative;
+  display: inline-block;
+  margin-top: 22px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content option {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-search:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown-search:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* =========================CSS Search========================= */
+
+
+.height-search {
+  height: 100px;
+}
+
+.form-search {
+  position: relative;
+}
+
+.form-search .fa-search {
+  position: absolute;
+  color: #9ca3af;
+  top:20px;
+  left: 20px;
+}
+
+.form-search span {
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
+}
+
+.left-pan {
+  padding-left: 7px;
+}
+
+.left-pan i {
+  padding-left: 10px;
+}
+
+.form-input {
+  height: 55px;
+  text-indent: 33px;
+  border-radius: 10px;
+}
+
+.search {
+  background-color: #F8F8F8;
+  margin-bottom: 20px;
+  margin-top: 43px;
+}
+
+.form-input:focus {
+  box-shadow: none;
+  border: none;
+}
+
+/* =========================CSS Account========================= */
+
+.body-account {
+  background: #d4f7d4;
+}
+
+.body-account h1 {
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+}
+
+.bo-content {
+ 
+  margin: 0 0 50px;
+}
+
+.form-account label {
+  line-height: 30px;
+}
+
+.card-body {
+  margin: 20px 0 0 120px;
+}
+
+.account {
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
+}
+
+.account {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e5e9f2;
+  border-radius: .2rem;
+}
+
+.card-header:first-child {
+  border-radius: calc(.2rem - 1px) calc(.2rem - 1px) 0 0;
+}
+
+.card-header {
+  border-bottom-width: 1px;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  color: inherit;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e9f2;
+}
+
+.btn-account {
+  background: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 18.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #3bbd57;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 13px 0px 0px 0px;
+  min-height: 3rem;
+  padding: calc(0rem - 1px) calc(2rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  border: 2px solid #3bbd57;
+  margin: 35px 0 23px 200px;
+}
+
+.btn-account:hover,
+.btn-account:focus {
+  background-color: #3bbd57;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: white;
+}
+
+.btn-account:hover {
+  transform: translateY(-1px);
+}
+
+.btn-account:active {
+  background-color: #3bbd57;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
 
 
 /* =========================CSS FORM========================= */
@@ -627,19 +958,19 @@ body {
 
 
 
-.content-img-holder img {
+.our-work-img-holder img {
   margin: 20px 20px 20px 20px;
   max-width: 300px;
   max-height: 100%;
   object-fit: contain;
 }
 
-.our-work-text p{
-    font-size: 25px;
-    color: #000000;
-    padding-bottom: 20px;
-    line-height: 35px;
-    font-weight: 350;
+.our-work-text p {
+  font-size: 25px;
+  color: #000000;
+  padding-bottom: 20px;
+  line-height: 35px;
+  font-weight: 350;
 }
 
 .our-work-text {
@@ -654,20 +985,20 @@ body {
   margin-top: 0px;
 }
 
-.our-work-text h1{
+.our-work-text h1 {
   padding-top: 60px;
   padding-bottom: 40px;
   font-size: 50px;
   color: #000000;
 }
 
-.our-work-img img{
+.our-work-img img {
   width: 100%;
   height: auto;
   margin-top: 83px;
 }
 
-.under-img img{
+.under-img img {
   width: 250px;
   height: 250px;
   display: inline-block;
@@ -675,14 +1006,14 @@ body {
 }
 
 .card-our-work {
-    width: 23rem;
-    margin: 50px 10px 70px 10px;
-    border: #b8e9c2 1px solid;
-    border-radius: 20px;
-    box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+  width: 23rem;
+  margin: 50px 10px 70px 10px;
+  border: #b8e9c2 1px solid;
+  border-radius: 20px;
+  box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
 }
 
-.title-change h1{
+.title-change h1 {
   padding-top: 37px;
   padding-bottom: 40px;
   font-size: 50px;
@@ -706,15 +1037,15 @@ body {
 }
 
 .our-work-text img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    padding-bottom: 50px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding-bottom: 50px;
 }
 
-.text-1 h1{
+.text-1 h1 {
   color: #8ef2a2;
   font-weight: 650;
 }
@@ -723,7 +1054,7 @@ body {
   padding-bottom: 30px;
 }
 
-.text-2 h1{
+.text-2 h1 {
   font-weight: 650;
 }
 
@@ -765,7 +1096,7 @@ body {
   color: #000000;
   text-align: center;
   padding-top: 50px;
-  
+
 }
 
 .contact-title {
@@ -785,11 +1116,11 @@ body {
   background: linear-gradient(111.3deg, #170b26 9.6%, #31f963 93.6%);
 }
 
-.cont-row label{
+.cont-row label {
   color: #000000;
 }
 
-.serv img{
+.serv img {
   width: 400px;
   height: 450px;
   max-width: 100%;
@@ -800,7 +1131,7 @@ body {
   padding-top: 5px;
 }
 
-.btn{
+.btn {
   align-items: center;
   border: 1px solid transparent;
   border-radius: 18.25rem;
@@ -845,10 +1176,11 @@ body {
   transform: translateY(0);
 }
 
-.row iframe{
+.row iframe {
   margin-top: opx;
   height: 600px;
 }
+
 
 /* Ha Anh*/
 
@@ -2156,7 +2488,7 @@ header .small-menu {
 /* ===================================== Our Blog CSS ================================== */
 .our-blog {
   background-color: #dee2e6;
-  padding: 100px 40px 40px 40px;
+  padding: 30px 40px 40px 40px;
 }
 
 @media screen and (max-width: 967px) {
