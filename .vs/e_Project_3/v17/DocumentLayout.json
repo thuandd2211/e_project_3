@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\e_project_3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9440DD83-B154-4F84-B79E-27716EDD1E2E}|e_Project_3\\e_Project_3.csproj|d:\\e_project_3\\e_project_3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9440DD83-B154-4F84-B79E-27716EDD1E2E}|e_Project_3\\e_Project_3.csproj|solutionrelative:e_project_3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\e_project_3\\e_Project_3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "e_Project_3\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\e_project_3\\e_Project_3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "e_Project_3\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-16T07:55:41.244Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
