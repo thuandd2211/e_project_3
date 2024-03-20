@@ -19,6 +19,9 @@
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+
+
+    <link href="/assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -59,8 +62,8 @@
                         <span class="nav-link-text ms-1">Campaign</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="../pages/our_work.html">
+                <li class="nav-item ">
+                    <a class="nav-link active " href="../pages/our_work.html">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
@@ -78,6 +81,22 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link " href="../pages/our_team.html">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-app text-info text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Our team</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../pages/partner.html">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-app text-info text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Partner</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -157,60 +176,111 @@
                                     <button class="fas fa-search search-btn"></button>
 
                                 </div>
+                                <div class="container-fluid">
 
-                                <table class="tb-body">
-                                    <tr>
-                                        <td class="tb-stt"><b>STT</b></td>
-                                        <td class="tb-image"><b>Image</b></td>
-                                        <td class="tb-name"><b>Name</b></td>
-                                        <td class="tb-action"><b>Action</b></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>1</p>
-                                        </td>
-                                        <td>
-                                            <p>test</p>
-                                        </td>
-                                        <td>
-                                            <p>test</p>
-                                        </td>
-                                        <td>
-                                            <p>
-                                                <a class="edit-button" href="edit_our_work.html">Edit</a>
-                                                <a class="delete-button" href="">Delete</a>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>1</p>
-                                        </td>
-                                        <td>
-                                            <p>test</p>
-                                        </td>
-                                        <td>
-                                            <p>test</p>
-                                        </td>
-                                        <td>
-                                            <p>
-                                                <a class="edit-button" href="edit_our_work.html">Edit</a>
-                                                <a class="delete-button" href="">Delete</a>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="center">
-                                    <div class="pagination">
-                                        <a href="#"><i class="fa fa-angle-left"></i></a>
-                                        <a href="#" class="active">1</a>
-                                        <a href="#">2</a>
-                                        <a href="#">3</a>
-                                        <a href="#">4</a>
-                                        <a href="#">5</a>
-                                        <a href="#">6</a>
-                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    <!-- Page Heading -->
+
+
+                                    <div class="card shadow mb-4">
+
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered" id="dataTable" width="100%"
+                                                    cellspacing="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>STT</th>
+                                                            <th>Our Work Title</th>
+                                                            <th>Our Work Title 1</th>
+                                                            <th>paragraph 1</th>
+                                                            <th>Our Work Title 2</th>
+                                                            <th>paragraph 2</th>
+                                                            <th>Our Work Title 3</th>
+                                                            <th>paragraph 3</th>
+                                                            <th>Our Work Title 3</th>
+                                                            <th>paragraph 3</th>
+                                                            <th>Our Work Title 4</th>
+                                                            <th>paragraph 4</th>
+                                                            <th>Image 1</th>
+                                                            <th>Image 2</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Our Work Title</td>
+                                                            <td>Our Work Title 1</td>
+                                                            <td class="tb-text-content">paragraph 1</td>
+                                                            <td>Our Work Title 2</td>
+                                                            <td class="tb-text-content">paragraph 2</td>
+                                                            <td>Our Work Title 3</td>
+                                                            <td class="tb-text-content">paragraph 3</td>
+                                                            <td>Our Work Title 3</td>
+                                                            <td class="tb-text-content">paragraph 3</td>
+                                                            <td>Our Work Title 4</td>
+                                                            <td class="tb-text-content">paragraph 4</td>
+                                                            <td><img class="tb-img" src="./img/team-4.jpg"
+                                                                    alt="picture"></td>
+                                                            <td><img class="tb-img" src="./img/team-4.jpg"
+                                                                    alt="picture"></td>
+
+                                                            <td
+                                                                class="d-flex align-items-center justify-content-around">
+                                                                <a href="edit_campaign.html" data-toggle="modal"
+                                                                    data-target="#editModal"><i
+                                                                        class="fas fa-edit"></i></a>
+                                                                <a href="#"><i class="fas fa-trash-alt"></i></a>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Our Work Title</td>
+                                                            <td>Our Work Title 1</td>
+                                                            <td class="tb-text-content">paragraph 1</td>
+                                                            <td>Our Work Title 2</td>
+                                                            <td class="tb-text-content">paragraph 2</td>
+                                                            <td>Our Work Title 3</td>
+                                                            <td class="tb-text-content">paragraph 3</td>
+                                                            <td>Our Work Title 3</td>
+                                                            <td class="tb-text-content">paragraph 3</td>
+                                                            <td>Our Work Title 4</td>
+                                                            <td class="tb-text-content">paragraph 4</td>
+                                                            <td><img class="tb-img" src="./img/team-4.jpg"
+                                                                alt="picture"></td>
+                                                            <td><img class="tb-img" src="./img/team-4.jpg"
+                                                                alt="picture"></td>
+
+                                                            <td
+                                                                class="d-flex align-items-center justify-content-around">
+                                                                <a href="edit_our_work.html" data-toggle="modal"
+                                                                    data-target="#editModal"><i
+                                                                        class="fas fa-edit"></i></a>
+                                                                <a href="#"><i class="fas fa-trash-alt"></i></a>
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="center">
+                                <div class="pagination">
+                                    <a href="#"><i class="fa fa-angle-left"></i></a>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#"><i class="fa fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -223,6 +293,19 @@
     </main>
 
     <!--   Core JS Files   -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+
+    <!-- Custom scripts for all pages-->
+
+    <!-- Page level plugins -->
+    <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/js/demo/datatables-demo.js"></script>
+
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
