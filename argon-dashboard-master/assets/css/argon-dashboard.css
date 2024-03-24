@@ -27015,7 +27015,7 @@ pre[class*="language-"] {
   border: 1px solid grey;
   border-radius: 5px;
   padding: 7px;
-  width: 60%;
+  width: 90%;
   text-align: center;
 }
 
@@ -27115,5 +27115,16 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.sign-in-button {
+  background-color: #38af52;
+}
+
+.sign-in-button:hover {
+  background-color: #2c9142;
+}
+
+.login-bg {
+  background-color:black;
+}
 
 /*# sourceMappingURL=dashboard-free.css.map */

@@ -1883,6 +1883,71 @@ input::-webkit-inner-spin-button {
 
 /* Donate CSS END*/
 
+/* Our Mission CSS */
+
+
+.om-title {
+  text-align: center;
+  margin: 140px 0 80px;
+}
+
+.om-title h1 {
+  font-size: 50px;
+}
+
+
+
+.om-content {
+  margin: 120px 0 60px;
+}
+
+.om-content p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.om-img-holder {
+
+}
+
+.om-img-holder img {
+  width: 100%;
+  height: auto;
+}
+
+.ov-title {
+  text-align: center;
+  margin: 140px 0 20px;
+}
+
+.ov-title h1 {
+  font-size: 50px;
+}
+
+.ov-content {
+  margin: 20px 0 60px;
+}
+
+.ov-content p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.ov-img-holder {
+  margin: 0 0 100px 0;
+}
+
+.ov-img-holder img {
+  width: 55%;
+  height: auto;
+  margin-left: 20%;
+  margin-left: 20%;
+}
+
+/* Our Mission CSS End */
+
+
 
 /* Ha Anh END*/
 
@@ -2346,7 +2411,7 @@ header .small-menu {
   line-height: 27px;
   font-weight: 500;
   text-align: justify;
-  font-size: .9rem;
+  font-size: 1.1rem;
 }
 
 .about-us .image-part .about-quick-box .about-qcard {
@@ -2761,6 +2826,10 @@ header .small-menu {
 
 .gallery_product {
   margin-bottom: 30px;
+}
+
+.bio-info {
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
