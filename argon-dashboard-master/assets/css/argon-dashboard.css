@@ -27011,6 +27011,12 @@ pre[class*="language-"] {
   padding: 5px;
 }
 
+.input-form input[type=password] {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .input-form input[type=date] {
   border: 1px solid grey;
   border-radius: 5px;
@@ -27104,6 +27110,7 @@ pre[class*="language-"] {
 }
 
 .tb-img {
+  max-width: 100px;
   width: 100% !important;
   height: auto !important;
 }
