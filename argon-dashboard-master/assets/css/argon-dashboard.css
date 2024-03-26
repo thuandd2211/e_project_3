@@ -27083,23 +27083,16 @@ pre[class*="language-"] {
   text-align: center;
 }
 
-.tb-body {
-  margin: 50px 0;
-  border-collapse: collapse;
-  border: 1px solid grey;
-  width: 100%;
-}
-
-.tb-body p {
-  margin: 0 !important;
-  
-}
-
-.tb-body td {
-  padding: 15px 0;
+.table th {
   text-align: center;
-  border-collapse: collapse;
-  border: 1px solid grey;
+}
+
+.tb-stt {
+  width: 5%;
+}
+
+.tb-action {
+  width: 10%;
 }
 
 .tb-text-content {
