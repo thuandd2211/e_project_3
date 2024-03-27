@@ -1,0 +1,26 @@
+
+
+
+<nav>
+    <a id="msft" target="_blank" href="https://microsoft.com">Microsoft</a> <br />
+    <a id="goog" target="_blank" href="https://google.com">Google</a> <br />
+    <a id="aapl" hidden="hidden" target="_blank" href="https://apple.com">Apple</a>
+</nav>
+
+<br />
+<button onclick="toggle(this)">Show Apple</button>
+
+<script>
+    let toggle = button => {
+        let element = document.getElementById("aapl");
+        let hidden = element.getAttribute("hidden");
+
+        if (hidden) {
+            element.removeAttribute("hidden");
+            button.innerText = "Hide Apple";
+        } else {
+            element.setAttribute("hidden", "hidden");
+            button.innerText = "Show Apple";
+        }
+    }
+</script>

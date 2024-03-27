@@ -491,11 +491,145 @@ body {
 /* Le Dat CSS End */
 
 
-
 /* Giang Thanh CSS */
 
-/* =========================CSS Search-Blog========================= */
-/* Giang Thanh CSS */
+/* Bổ sung */
+
+.text-center {
+  margin-bottom: 50px;
+  text-align: center !important;
+  margin-top: 90px;
+}
+
+.text-part-under {
+  margin-bottom: 180px;
+}
+
+.text-success {
+  color: #28a745 !important;
+  text-align: center;
+  margin: 90px
+}
+
+.btn-bio {
+  background: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 18.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #3bbd57;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 13px 0px 0px 0px;
+  min-height: 3rem;
+  padding: calc(0rem - 1px) calc(2rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 150px;
+  border: 2px solid #3bbd57;
+  margin: 10px 0 10px 120px;
+}
+
+.btn-bio-under {
+  background: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 18.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #3bbd57;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 13px 0px 0px 0px;
+  min-height: 3rem;
+  padding: calc(0rem - 1px) calc(2rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 150px;
+  border: 2px solid #3bbd57;
+  margin: 10px 0 10px 102px
+}
+
+.btn-bio:hover,
+.btn-bio:focus,
+.btn-bio-under:hover,
+.btn-bio-under:focus {
+  background-color: #3bbd57;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: white;
+}
+
+.btn-bio-under:hover {
+  transform: translateY(-1px);
+}
+
+.btn-bio-under:active {
+  background-color: #3bbd57;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.card-member h3{
+  text-align: center;
+}
+
+.card-member h6{
+  text-align: center;
+}
+
+.card-member-under h3{
+  text-align: center;
+}
+
+.card-member-under h6{
+  text-align: center;
+}
+
+.card-member-under {
+  margin-bottom: 150px;
+}
+
+.our-team .text-part-team img {
+  width: 300px !important;
+  height: 400px !important;
+  margin: 0 0 0 30px;
+}
+
+.our-team .text-part .bio {
+  width: 70%;
+  height: fit-content;
+  border: 1px solid rgb(216, 204, 204);
+  border-left: none;
+  border-right: none;
+  margin: 20px 30px 150px 85px
+}
+
+.our-team .text-part img {
+  width: 300px !important;
+  height: 400px !important;
+  margin: 0 0 0 130px;
+}
+
+/* Bổ sung end */
 
 /* =========================CSS Donate========================= */
 
