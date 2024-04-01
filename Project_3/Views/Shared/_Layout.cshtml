@@ -1,0 +1,183 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ngo Charitables</title>
+    <link rel="shortcut icon" href="~/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="~/images/user_img/fav.jpg">
+    <link rel="stylesheet" href="~/Content/user_css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/user_css/all.min.css">
+    <link rel="stylesheet" href="~/Content/user_css/animate.css">
+    <link rel="stylesheet" href="~/Content/user_plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/user_plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/user_css/style.css" />
+
+
+
+</head>
+
+<body>
+    @*<script src="~/Scripts/user_js/header.js"></script>*@
+    <header class="continer-fluid ">
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    <div class="col-lg-3 col-md-12 logo">
+                        <a class="" href="@Url.Action("Index", "Home")">
+                            <img src="../../images/user_img/logo.jpg" alt="">
+                            <a data-toggle="collapse" data-target="#menu" href="#menu">
+                                <i class="fas d-block d-lg-none  small-menu fa-bars"></i>
+                            </a>
+                        </a>
+
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-12 d-none d-lg-block nav-col">
+
+                        <ul class="navbad">
+                            <li class="nav-item active">
+                                <a href="@Url.Action("Index", "Home")" class="nav-link">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link">
+                                    <span>Our Work</span>
+                                </a>
+                                <div class="dropdown-content">
+
+                                    @foreach (var i in Project_3.Data.DbConnect.Db.Categories.ToList().Where(c => c.Status == 1).ToList())
+                                    {
+                                        <a href="~/OurWork/Index/@i.CategoryId">@i.Name</a>
+                                    }
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="@Url.Action("Index", "Campaign")" class="nav-link">
+                                    <span>Campaign</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("Index", "Blog")" class="nav-link">
+                                    <span>Blog</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="@Url.Action("Index","AboutUs")">About Us</a>
+                                <div class="dropdown-content">
+                                    <a href="@Url.Action("WhatWeDo","AboutUs")">What We Do</a>
+                                    <a href="@Url.Action("Mission","AboutUs")">Our Mission</a>
+                                    <a href="@Url.Action("OurTeam","AboutUs")">Our Team</a>
+                                    <a href="@Url.Action("Partner","AboutUs")">Our Partners</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("Index", "Contact")" class="nav-link">
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+@*                            <li class="nav-item">
+                                <a href="@Url.Action("Index", "Donate")" class="nav-link">
+                                    <span>Donate</span>
+                                </a>
+                            </li>*@
+                        </ul>
+                    </div>
+                    @if (Session["DonorId"] != null)
+                    {
+                        <div class="col-lg-1 dropdown">
+                            <a><img class="user-icon" src="~/images/user_img/icon/user.png" alt=""></a>
+                            <div class="dropdown-content user-panel">
+                                <a href="@Url.Action("EditAccount", "Login")">Account Information</a>
+                                <a href="@Url.Action("YourCampaign", "Login")">Your Campaigns</a>
+                                <a href="@Url.Action("Logout","Login")">Log out <img class="logout-icon" src="~/images/user_img/icon/logout.png" alt=""></a>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-lg-1">
+                            <a href="@Url.Action("Index", "Login")" class="nav-link login-btn">
+                                <span>Login</span>
+                            </a>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    @RenderBody()
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        At Ngo Charitables, we are dedicated to making a meaningful impact in the lives of those in need. Founded on the principles of compassion and community, our organization strives to address pressing social issues and provide support to marginalized populations. 
+                    </p>
+                    <p>
+                        Through our diverse programs and initiatives, we aim to foster positive change and create a brighter future for all. Join us in our mission to spread hope, inspire change, and build a more inclusive society.
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h2>Useful Links</h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                        <li>
+                            <a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i>
+                        </li>
+                        <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                          </ul>    
+                </div>
+                <div class="col-md-3 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        Ngo Charitables <br>
+                        Tran Dai Nghia (Hai Ba Trung District) <br>
+                        Cocogodd, IND <br>
+                        Phone: +84 69696969 <br>
+                        Email: <a href="mailto:info@anybiz.com" class="">NgoCharitables@email.com</a><br>
+                        Web: <a href="smart-eye.html" class=""> www.Ngocharitables.com.vn</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <div class="copy">
+        <div class="container">
+            <a href="https://www.smarteyeapps.com/">
+                2024 &copy; From our hard work | Designed and Developed by
+                Team 3
+            </a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+
+    <script src="~/Scripts/user_js/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/user_js/popper.min.js"></script>
+    <script src="~/Scripts/user_js/bootstrap.min.js"></script>
+    <script src="~/Content/user_plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+    <script src="~/Content/user_plugins/slider/js/owl.carousel.min.js"></script>
+    <script src="~/Scripts/user_js/script.js"></script>
+
+
+
+</body>
+
+
+
+</html>

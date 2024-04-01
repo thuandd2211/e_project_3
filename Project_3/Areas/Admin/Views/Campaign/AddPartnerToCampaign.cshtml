@@ -1,0 +1,106 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Project_3.Models.Partner>
+@{
+    ViewBag.Title = "AddPartnerToCampaign";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+<div class="row">
+    <div class="col-xl-12 col-sm-6 mb-xl-0 mb-4">
+        <div class="card add-new-card">
+            <div class="card-body p-4 row">
+
+                <div class="numbers">
+                    <h4 class="font-weight-bolder text-center">Partner Data</h4>
+                </div>
+                <div class="col-8">
+                    @Html.ActionLink("Back", "PartnerOfCampaign", "Campaign", new { area = "Admin", id = @ViewBag.CampId }, new { @class = "add-button" })
+                </div>
+                <div class="search-box col-4 mt-3 mb-3">
+                    @using (Html.BeginForm("AddPartnerToCampaign", "Campaign", FormMethod.Get))
+                    {
+                        <input type="text" class="search-box-input" name="search" id="search" placeholder="Enter Partner Name,Phone,Email">
+                        <button type="submit" class="fas fa-search search-btn"></button>
+                    }
+                </div>
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+
+
+                    <div class="card shadow mb-4">
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%"
+                                       cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Logo</th>
+                                            <th>Partner Name</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (Model.Any())
+                                        {
+                                            foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>@item.PartnerId</td>
+                                                    <td>
+                                                        @if (item.Image != null)
+                                                        {
+                                                            <img src="data:image; base64, @System.Convert.ToBase64String(item.Image)" style="width:100px;" />
+                                                        }
+                                                    </td>
+                                                    <td>@item.Name</td>
+                                                    <td>@item.Email</td>
+                                                    <td> @item.Address</td>
+                                                    <td> @item.Phone</td>
+                                                    <td class="d-flex align-items-center justify-content-around">
+                                                        @if (!Project_3.Data.DbConnect.CheckPartnerInCamp(ViewBag.CampId, item.PartnerId))
+                                                        {
+                                                            <a href="@Url.Action("AddPartnerToCamp","Campaign", new {id = ViewBag.CampId, partnerId = item.PartnerId})" data-toggle="modal"
+                                                               data-target="#editModal">
+                                                                <i class="fas fa-plus"></i>
+                                                            </a>
+                                                        }
+                                                    </td>
+                                                </tr>
+                                                <tr></tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="7" style="text-align:center; font-size:large;">
+                                                    <b>No Data</b>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="center">
+                                <div class="pagination">
+                                    @Html.PagedListPager(Model, p => Url.Action("AddPartnerToCampaign", new { page = p, currentFilter = ViewBag.CurrentFilter }))
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

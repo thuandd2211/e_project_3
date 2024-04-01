@@ -1,0 +1,149 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Project_3.Models.Campaign_Detail>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-xl-12 col-sm-6 mb-xl-0 mb-4">
+            <div class="card add-new-card">
+                <div class="card-body p-4 row">
+
+                    <div class="numbers">
+                        <h4 class="font-weight-bolder text-center">Campaign Data</h4>
+                    </div>
+                    <div class="col-8">
+                        <a class="add-button" href="@Url.Action("Add","Campaign")">Add</a>
+
+                    </div>
+                    <div class="search-box col-4 mt-3 mb-3">
+                        @using (Html.BeginForm("Index", "Campaign", FormMethod.Get))
+                        {
+                            <input type="text" class="search-box-input" name="search" id="search" placeholder="Enter Campaign Name">
+                            <button type="submit" class="fas fa-search search-btn"></button>
+
+                        }
+                    </div>
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+
+
+                        <div class="card shadow mb-4">
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%"
+                                           cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Campaign Name</th>
+                                                <th>Location</th>
+                                                <th>StartTime</th>
+                                                <th>EndTime</th>
+                                                <th>Campaign Type</th>
+                                                <th>Employee</th>
+                                                <th>Campaign title 1</th>
+                                                <th>Paragraph 1</th>
+                                                <th>Image 1</th>
+                                                <th>Campaign title 2</th>
+                                                <th>Paragraph 2</th>
+                                                <th>Image 2</th>
+                                                <th>Campaign title 3</th>
+                                                <th>Paragraph 3</th>
+                                                <th>Image 3</th>
+                                                <th>Campaign title 4</th>
+                                                <th>Paragraph 4</th>
+                                                <th>Image 4</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model.Any())
+                                            {
+                                                foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>@item.Campaign.CampId</td>
+                                                        <td>@item.Campaign.Name</td>
+                                                        <td>@item.Campaign.Location</td>
+                                                        <td>@item.Campaign.StartTime</td>
+                                                        <td>@item.Campaign.EndTime</td>
+                                                        <td>@item.Campaign.Category.Name</td>
+                                                        <td>@item.Campaign.Employee.Fullname</td>
+                                                        <td>@item.Title1</td>
+                                                        <td class="tb-text-content">@item.Script1</td>
+                                                        <td>
+                                                            @if (item.Img1 != null)
+                                                            {
+                                                                <img src="data:image; base64, @System.Convert.ToBase64String(item.Img1)" style="width:100px;" />
+                                                            }
+                                                        </td>
+                                                        <td>@item.Title2</td>
+                                                        <td class="tb-text-content">@item.Script2</td>
+                                                        <td>
+                                                            @if (item.Img2 != null)
+                                                            {
+                                                                <img src="data:image; base64, @System.Convert.ToBase64String(item.Img2)" style="width:100px;" />
+                                                            }
+                                                        </td>
+                                                        <td>@item.Title3</td>
+                                                        <td class="tb-text-content">@item.Script3</td>
+                                                        <td>
+                                                            @if (item.Img3 != null)
+                                                            {
+                                                                <img src="data:image; base64, @System.Convert.ToBase64String(item.Img3)" style="width:100px;" />
+                                                            }
+                                                        </td>
+                                                        <td>@item.Title4</td>
+                                                        <td class="tb-text-content">@item.Script4</td>
+                                                        <td>
+                                                            @if (item.Img4 != null)
+                                                            {
+                                                                <img src="data:image; base64, @System.Convert.ToBase64String(item.Img4)" style="width:100px;" />
+                                                            }
+                                                        </td>
+                                                        <td class="d-flex align-items-center justify-content-around">
+                                                            <a href="@Url.Action("Edit","Campaign", new {id = item.Campaign.CampId})" data-toggle="modal"
+                                                               data-target="#editModal">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="@Url.Action("Delete","Campaign", new {id = item.Campaign.CampId})"><i class="fas fa-trash-alt"></i></a>
+                                                            <a href="@Url.Action("PartnerOfCampaign","Campaign", new {id = item.Campaign.CampId})"><i class="fa fa-handshake"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr></tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="20" style="text-align:center; font-size:large;">
+                                                        <b>No Data</b>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="center">
+                                    <div class="pagination">
+                                        @Html.PagedListPager(Model, p => Url.Action("Index", new { page = p, currentFilter = ViewBag.CurrentFilter }))
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

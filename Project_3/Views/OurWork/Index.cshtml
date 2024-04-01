@@ -1,0 +1,106 @@
+﻿@model Project_3.Models.Category
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="slider">
+    <div class="item">
+        <div class="slider-img"><img src="~/images/user_img/background/1.jpg" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                    <div class="animated bounceInDown slider-captions background-text">
+                        <h1 class="slider-title">Our Works</h1>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="our-work-body">
+        <div class="example-test">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 content-img-holder">
+                        <img src="data:image; base64, @System.Convert.ToBase64String(Model.Img1)" >
+                    </div>
+                    <div class=" col-md-7 our-work-text">
+                        <h1> @Model.Title1</h1>
+                        <p>
+                            @Model.Script1
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-5 our-work-text">
+                    <h1>Impact 2022-23</h1>
+                    <img src="~/images/user_img/our_work/impact.jpg" alt="">
+                </div>
+                <div class="col-md-3 text-impact">
+                    <div class="text-1">
+                        <h1>120,000+</h1>
+                        <p>Receive support to help improve material living conditions.</p>
+                    </div>
+                    <div class="text-2">
+                        <h1>120,000+</h1>
+                        <p>Encourage kindness good deeds are spread.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-impact">
+                    <div class="text-1">
+                        <h1>44.000+</h1>
+                        <p>Help them overcome difficulties and create new opportunities.</p>
+                    </div>
+                    <div class="text-2">
+                        <h1>120,000+</h1>
+                        <p>Create positive changes improve infrastructure, education, health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-test">
+            <div class="container">
+                <div class="row ">
+                    <div class="our-work-text">
+                        <h1> @Model.Title2</h1>
+                        <p>
+                            @Model.Script2
+                        </p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="title-change">
+                <h1> @Model.Title3</h1>
+                <p>
+                    @Model.Script3
+                </p>
+            </div>
+            <div class="row">
+                @foreach (var item in Model.Campaigns.OrderByDescending(c => c.CampId).ToList().Take(3))
+                {
+                    <div class="card card-our-work">
+                        <img src="data:image; base64, @System.Convert.ToBase64String(item.Campaign_Detail.ElementAt(0).Img1)" class="img-top" alt="...">
+                        <div class="card-change">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Campaign_Detail.ElementAt(0).Script1</p>
+                            <a href="/Campaign/Detail/@item.CampId" class="btn btn-primary">Read more...</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+

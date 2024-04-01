@@ -1,0 +1,86 @@
+﻿@model Project_3.Models.Campaign_Detail
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="content-detail">
+        <div class="campaign-detail-title">
+            <h1>@Model.Campaign.Name</h1>
+            <p>@Model.Campaign.StartTime - @Model.Campaign.EndTime</p>
+            <p>@Model.Campaign.Location</p>
+        </div>  
+            <div class="campaign-detail-img-contain">
+                @if (Model.Img1 != null)
+                {
+                    <img class="campaign-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img1)" />
+                }
+            </div>
+        <div class="content-paragraph">
+            <h2 class="small-title">@Model.Title1</h2>
+
+            <p>
+                @Model.Script1
+            </p>
+        </div>       
+            <div class="campaign-detail-img-contain">
+                @if (Model.Img2 != null)
+                {
+                    <img class="campaign-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img2)" />
+                }
+            </div>
+        <div class="content-paragraph">
+            <h2 class="small-title">@Model.Title2</h2>
+
+            <p>
+                @Model.Script2
+            </p>
+        </div>      
+            <div class="campaign-detail-img-contain">
+                @if (Model.Img3 != null)
+                {
+                    <img class="campaign-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img3)" />
+                }
+            </div>
+        
+        <div class="content-paragraph">
+            <h2 class="small-title">@Model.Title3</h2>
+
+            <p>
+                @Model.Script3
+            </p>
+        </div>    
+            <div class="campaign-detail-img-contain">
+                @if (Model.Img4 != null)
+                {
+                    <img class="campaign-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img4)" />
+                }
+            </div>
+        <div class="content-paragraph">
+            <h2 class="small-title">@Model.Title4</h2>
+
+            <p>
+                @Model.Script4
+            </p>
+        </div>
+
+    </div>
+    <div class="donate-container">
+        <!-- Donate button -->
+        <div class="donate-button">
+            <a href="@Url.Action("Index","Donate")">Donate now</a>            
+        </div>
+    </div>
+        <div class="row campaign-detail-gallery">
+            @foreach (var item in Project_3.Data.DbConnect.REF_CAMP_(Model.CampId))
+            {
+                <div class="col-md-3">
+                    @if (item.Partner.Image != null)
+                    {
+                        <img src="data:image; base64, @System.Convert.ToBase64String(item.Partner.Image)" />
+                    }
+                </div>
+            }
+        </div>
+</div>

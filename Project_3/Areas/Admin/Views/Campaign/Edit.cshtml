@@ -1,0 +1,138 @@
+﻿@model Project_3.Models.Campaign_Detail
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Campaign", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="add-new-card col-xl-10 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-body p-4">
+
+                        <div class="row">
+                            <div class="numbers">
+                                <h4 class="font-weight-bolder text-center">Edit Data</h4>
+                            </div>
+                            @Html.AntiForgeryToken()
+                            @Html.HiddenFor(m => m.Camp_DeId)
+                            @Html.HiddenFor(m => m.CampId)
+                            @*<input name="CampId" value="@Model.CampId" hidden />*@
+                            <div class="col-10 form-data-card-title ">
+                                <div class="input-form">
+                                    <p class="title">Campaign Name</p>
+                                    <input type="text" name="Name" placeholder="Campaign Name" required value="@Model.Campaign.Name">
+                                    @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Location</p>
+                                    <input type="text" name="Location" placeholder="Location" required value="@Model.Campaign.Location">
+                                    @Html.ValidationMessage("Location", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="row">
+                                    <div class="input-form col-3">
+                                        <p class="title">Start Date</p>
+                                        <input type="datetime-local" name="StartTime" required value="@Html.DisplayFor(c => c.Campaign.StartTime)">
+                                        @Html.ValidationMessage("StartTime", "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-form col-3">
+                                        <p class="title">End Date</p>
+                                        <input type="datetime-local" name="EndTime" required value="@Html.DisplayFor(c => c.Campaign.EndTime)">
+                                        @Html.ValidationMessage("EndTime", "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-form col-3">
+                                        <p class="title">Campaign Type</p>
+                                        @Html.DropDownListFor(c => c.Campaign.Category.CategoryId, (SelectList)ViewBag.CateItem, new { @class = "select-option" })
+                                        @Html.ValidationMessage("Category", "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-form col-3">
+                                        <p class="title">Employees</p>
+                                        @Html.DropDownListFor(c => c.Campaign.Employee.EmpId, (SelectList)ViewBag.EmpItem, new { @class = "select-option" })
+                                        @Html.ValidationMessage("Employee", "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 form-data-card">
+
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 1</p>
+                                    <input name="Title1" value="@Model.Title1" />
+                                    @Html.ValidationMessage("Title1", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 1</p>
+                                    <textarea name="Script1">@Model.Script1</textarea>
+                                    @Html.ValidationMessage("Script1", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 1</p>
+                                    <input type="file" name="img1">
+                                </div>
+
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 2</p>
+                                    <input name="Title2" value="@Model.Title2" />
+                                    @Html.ValidationMessage("Title2", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 2</p>
+                                    <textarea name="Script2">@Model.Script2</textarea>
+                                    @Html.ValidationMessage("Script2", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 2</p>
+                                    <input type="file" name="img2">
+                                </div>
+
+
+                            </div>
+                            <div class="col-6 form-data-card">
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 3</p>
+                                    <input name="Title3" value="@Model.Title3" />
+                                    @Html.ValidationMessage("Title3", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 3</p>
+                                    <textarea name="Script3">@Model.Script3</textarea>
+                                    @Html.ValidationMessage("Script3", "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="input-form">
+                                    <p class="title">Image 3</p>
+                                    <input type="file" name="img3">
+                                </div>
+
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 4</p>
+                                    <input name="Title4" value="@Model.Title4" />
+                                    @Html.ValidationMessage("Title4", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 4</p>
+                                    <textarea name="Script4">@Model.Script4</textarea>
+                                    @Html.ValidationMessage("Script4", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 4</p>
+                                    <input type="file" name="img4">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-data-button">
+                            <input type="submit" class="add-button" value="Save">
+
+                            <a class="delete-button" href="@Url.Action("Index", "Campaign")">Cancel</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

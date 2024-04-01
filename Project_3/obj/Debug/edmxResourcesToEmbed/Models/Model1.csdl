@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ngo_websiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Name="BlogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Author" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="CurrentTime" Type="DateTime" Precision="3" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Title2" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Title3" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="EmpId" Type="Int32" />
+    <Property Name="Profession" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Introduction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BigTitle" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="Title4" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.R_22" FromRole="Blog" ToRole="Employee" />
+    <NavigationProperty Name="Campaigns" Relationship="Self.REF_CAMP_BLOG" FromRole="Blog" ToRole="Campaign" />
+  </EntityType>
+  <EntityType Name="Campaign">
+    <Key>
+      <PropertyRef Name="CampId" />
+    </Key>
+    <Property Name="CampId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentTime" Type="DateTime" Precision="3" />
+    <Property Name="CompleteTime" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="EmpId" Type="Int32" />
+    <Property Name="NgoId" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="Self.R_21" FromRole="Campaign" ToRole="Category" />
+    <NavigationProperty Name="Employee" Relationship="Self.R_23" FromRole="Campaign" ToRole="Employee" />
+    <NavigationProperty Name="Ngo" Relationship="Self.R_24" FromRole="Campaign" ToRole="Ngo" />
+    <NavigationProperty Name="Payments" Relationship="Self.R_28" FromRole="Campaign" ToRole="Payment" />
+    <NavigationProperty Name="REF_FUND_CAMP_DONOR" Relationship="Self.R_38" FromRole="Campaign" ToRole="REF_FUND_CAMP_DONOR" />
+    <NavigationProperty Name="Campaign_Detail" Relationship="Self.R_41" FromRole="Campaign" ToRole="Campaign_Detail" />
+    <NavigationProperty Name="Blogs" Relationship="Self.REF_CAMP_BLOG" FromRole="Campaign" ToRole="Blog" />
+  </EntityType>
+  <EntityType Name="Campaign_Detail">
+    <Key>
+      <PropertyRef Name="Camp_DeId" />
+    </Key>
+    <Property Name="Camp_DeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Title2" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Title3" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CampId" Type="Int32" />
+    <Property Name="Title4" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Campaign" Relationship="Self.R_41" FromRole="Campaign_Detail" ToRole="Campaign" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Title2" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Img2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Title3" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Title4" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Script4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Campaigns" Relationship="Self.R_21" FromRole="Category" ToRole="Campaign" />
+  </EntityType>
+  <EntityType Name="Donor">
+    <Key>
+      <PropertyRef Name="DonorId" />
+    </Key>
+    <Property Name="DonorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Phone" Type="Int32" />
+    <Property Name="Username" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="REF_DONOR_FUND" Relationship="Self.R_33" FromRole="Donor" ToRole="REF_DONOR_FUND" />
+    <NavigationProperty Name="REF_FUND_CAMP_DONOR" Relationship="Self.R_39" FromRole="Donor" ToRole="REF_FUND_CAMP_DONOR" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Phone" Type="Int32" />
+    <Property Name="Username" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Blogs" Relationship="Self.R_22" FromRole="Employee" ToRole="Blog" />
+    <NavigationProperty Name="Campaigns" Relationship="Self.R_23" FromRole="Employee" ToRole="Campaign" />
+    <NavigationProperty Name="Groups" Relationship="Self.REF_EMP_GROUP" FromRole="Employee" ToRole="Groups" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+    </Key>
+    <Property Name="ExpenseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="REF_EXPENSE_PAYMENT" Relationship="Self.R_29" FromRole="Expense" ToRole="REF_EXPENSE_PAYMENT" />
+  </EntityType>
+  <EntityType Name="Fund">
+    <Key>
+      <PropertyRef Name="FundId" />
+    </Key>
+    <Property Name="FundId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Payments" Relationship="Self.R_32" FromRole="Fund" ToRole="Payment" />
+    <NavigationProperty Name="REF_DONOR_FUND" Relationship="Self.R_35" FromRole="Fund" ToRole="REF_DONOR_FUND" />
+    <NavigationProperty Name="REF_FUND_CAMP_DONOR" Relationship="Self.R_36" FromRole="Fund" ToRole="REF_FUND_CAMP_DONOR" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.REF_EMP_GROUP" FromRole="Groups" ToRole="Employee" />
+    <NavigationProperty Name="Roles" Relationship="Self.REF_GROUPS_ROLE" FromRole="Groups" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Ngo">
+    <Key>
+      <PropertyRef Name="NgoId" />
+    </Key>
+    <Property Name="NgoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Phone" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="true" Unicode="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Campaigns" Relationship="Self.R_24" FromRole="Ngo" ToRole="Campaign" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="PaymentId" />
+    </Key>
+    <Property Name="PaymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentTime" Type="DateTime" Precision="3" />
+    <Property Name="CampId" Type="Int32" />
+    <Property Name="FundId" Type="Int32" />
+    <NavigationProperty Name="Campaign" Relationship="Self.R_28" FromRole="Payment" ToRole="Campaign" />
+    <NavigationProperty Name="Fund" Relationship="Self.R_32" FromRole="Payment" ToRole="Fund" />
+    <NavigationProperty Name="REF_EXPENSE_PAYMENT" Relationship="Self.R_31" FromRole="Payment" ToRole="REF_EXPENSE_PAYMENT" />
+  </EntityType>
+  <EntityType Name="PaymentMethod">
+    <Key>
+      <PropertyRef Name="PayMethodId" />
+    </Key>
+    <Property Name="PayMethodId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="REF_FUND_CAMP_DONOR" Relationship="Self.R_40" FromRole="PaymentMethod" ToRole="REF_FUND_CAMP_DONOR" />
+  </EntityType>
+  <EntityType Name="REF_DONOR_FUND">
+    <Key>
+      <PropertyRef Name="DonorId" />
+      <PropertyRef Name="FundId" />
+    </Key>
+    <Property Name="DonorId" Type="Int32" Nullable="false" />
+    <Property Name="FundId" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Double" />
+    <NavigationProperty Name="Donor" Relationship="Self.R_33" FromRole="REF_DONOR_FUND" ToRole="Donor" />
+    <NavigationProperty Name="Fund" Relationship="Self.R_35" FromRole="REF_DONOR_FUND" ToRole="Fund" />
+  </EntityType>
+  <EntityType Name="REF_EXPENSE_PAYMENT">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+      <PropertyRef Name="PaymentId" />
+    </Key>
+    <Property Name="ExpenseId" Type="Int32" Nullable="false" />
+    <Property Name="PaymentId" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Double" />
+    <NavigationProperty Name="Expense" Relationship="Self.R_29" FromRole="REF_EXPENSE_PAYMENT" ToRole="Expense" />
+    <NavigationProperty Name="Payment" Relationship="Self.R_31" FromRole="REF_EXPENSE_PAYMENT" ToRole="Payment" />
+  </EntityType>
+  <EntityType Name="REF_FUND_CAMP_DONOR">
+    <Key>
+      <PropertyRef Name="FundId" />
+      <PropertyRef Name="CampId" />
+      <PropertyRef Name="DonorId" />
+    </Key>
+    <Property Name="FundId" Type="Int32" Nullable="false" />
+    <Property Name="CampId" Type="Int32" Nullable="false" />
+    <Property Name="DonorId" Type="Int32" Nullable="false" />
+    <Property Name="CurrentTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="PayMethodId" Type="Int32" />
+    <NavigationProperty Name="Campaign" Relationship="Self.R_38" FromRole="REF_FUND_CAMP_DONOR" ToRole="Campaign" />
+    <NavigationProperty Name="Donor" Relationship="Self.R_39" FromRole="REF_FUND_CAMP_DONOR" ToRole="Donor" />
+    <NavigationProperty Name="Fund" Relationship="Self.R_36" FromRole="REF_FUND_CAMP_DONOR" ToRole="Fund" />
+    <NavigationProperty Name="PaymentMethod" Relationship="Self.R_40" FromRole="REF_FUND_CAMP_DONOR" ToRole="PaymentMethod" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Groups" Relationship="Self.REF_GROUPS_ROLE" FromRole="Role" ToRole="Groups" />
+  </EntityType>
+  <Association Name="R_22">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Blog" Type="Self.Blog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpId" />
+      </Principal>
+      <Dependent Role="Blog">
+        <PropertyRef Name="EmpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_21">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Campaign">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_23">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpId" />
+      </Principal>
+      <Dependent Role="Campaign">
+        <PropertyRef Name="EmpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_24">
+    <End Role="Ngo" Type="Self.Ngo" Multiplicity="0..1" />
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ngo">
+        <PropertyRef Name="NgoId" />
+      </Principal>
+      <Dependent Role="Campaign">
+        <PropertyRef Name="NgoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_28">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="0..1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="CampId" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="CampId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_38">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+    <End Role="REF_FUND_CAMP_DONOR" Type="Self.REF_FUND_CAMP_DONOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="CampId" />
+      </Principal>
+      <Dependent Role="REF_FUND_CAMP_DONOR">
+        <PropertyRef Name="CampId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_41">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="0..1" />
+    <End Role="Campaign_Detail" Type="Self.Campaign_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="CampId" />
+      </Principal>
+      <Dependent Role="Campaign_Detail">
+        <PropertyRef Name="CampId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_33">
+    <End Role="Donor" Type="Self.Donor" Multiplicity="1" />
+    <End Role="REF_DONOR_FUND" Type="Self.REF_DONOR_FUND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donor">
+        <PropertyRef Name="DonorId" />
+      </Principal>
+      <Dependent Role="REF_DONOR_FUND">
+        <PropertyRef Name="DonorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_39">
+    <End Role="Donor" Type="Self.Donor" Multiplicity="1" />
+    <End Role="REF_FUND_CAMP_DONOR" Type="Self.REF_FUND_CAMP_DONOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donor">
+        <PropertyRef Name="DonorId" />
+      </Principal>
+      <Dependent Role="REF_FUND_CAMP_DONOR">
+        <PropertyRef Name="DonorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_29">
+    <End Role="Expense" Type="Self.Expense" Multiplicity="1" />
+    <End Role="REF_EXPENSE_PAYMENT" Type="Self.REF_EXPENSE_PAYMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expense">
+        <PropertyRef Name="ExpenseId" />
+      </Principal>
+      <Dependent Role="REF_EXPENSE_PAYMENT">
+        <PropertyRef Name="ExpenseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_32">
+    <End Role="Fund" Type="Self.Fund" Multiplicity="0..1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fund">
+        <PropertyRef Name="FundId" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="FundId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_35">
+    <End Role="Fund" Type="Self.Fund" Multiplicity="1" />
+    <End Role="REF_DONOR_FUND" Type="Self.REF_DONOR_FUND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fund">
+        <PropertyRef Name="FundId" />
+      </Principal>
+      <Dependent Role="REF_DONOR_FUND">
+        <PropertyRef Name="FundId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_36">
+    <End Role="Fund" Type="Self.Fund" Multiplicity="1" />
+    <End Role="REF_FUND_CAMP_DONOR" Type="Self.REF_FUND_CAMP_DONOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fund">
+        <PropertyRef Name="FundId" />
+      </Principal>
+      <Dependent Role="REF_FUND_CAMP_DONOR">
+        <PropertyRef Name="FundId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_31">
+    <End Role="Payment" Type="Self.Payment" Multiplicity="1" />
+    <End Role="REF_EXPENSE_PAYMENT" Type="Self.REF_EXPENSE_PAYMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="PaymentId" />
+      </Principal>
+      <Dependent Role="REF_EXPENSE_PAYMENT">
+        <PropertyRef Name="PaymentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_40">
+    <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+    <End Role="REF_FUND_CAMP_DONOR" Type="Self.REF_FUND_CAMP_DONOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethod">
+        <PropertyRef Name="PayMethodId" />
+      </Principal>
+      <Dependent Role="REF_FUND_CAMP_DONOR">
+        <PropertyRef Name="PayMethodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REF_CAMP_BLOG">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <End Role="Blog" Type="Self.Blog" Multiplicity="*" />
+  </Association>
+  <Association Name="REF_EMP_GROUP">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <End Role="Groups" Type="Self.Group" Multiplicity="*" />
+  </Association>
+  <Association Name="REF_GROUPS_ROLE">
+    <End Role="Groups" Type="Self.Group" Multiplicity="*" />
+    <End Role="Role" Type="Self.Role" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ngo_websiteEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blogs" EntityType="Self.Blog" />
+    <EntitySet Name="Campaigns" EntityType="Self.Campaign" />
+    <EntitySet Name="Campaign_Detail" EntityType="Self.Campaign_Detail" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Donors" EntityType="Self.Donor" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Expenses" EntityType="Self.Expense" />
+    <EntitySet Name="Funds" EntityType="Self.Fund" />
+    <EntitySet Name="Groups" EntityType="Self.Group" />
+    <EntitySet Name="Ngoes" EntityType="Self.Ngo" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="PaymentMethods" EntityType="Self.PaymentMethod" />
+    <EntitySet Name="REF_DONOR_FUND" EntityType="Self.REF_DONOR_FUND" />
+    <EntitySet Name="REF_EXPENSE_PAYMENT" EntityType="Self.REF_EXPENSE_PAYMENT" />
+    <EntitySet Name="REF_FUND_CAMP_DONOR" EntityType="Self.REF_FUND_CAMP_DONOR" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <AssociationSet Name="R_22" Association="Self.R_22">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Blog" EntitySet="Blogs" />
+    </AssociationSet>
+    <AssociationSet Name="R_21" Association="Self.R_21">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Campaign" EntitySet="Campaigns" />
+    </AssociationSet>
+    <AssociationSet Name="R_23" Association="Self.R_23">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Campaign" EntitySet="Campaigns" />
+    </AssociationSet>
+    <AssociationSet Name="R_24" Association="Self.R_24">
+      <End Role="Ngo" EntitySet="Ngoes" />
+      <End Role="Campaign" EntitySet="Campaigns" />
+    </AssociationSet>
+    <AssociationSet Name="R_28" Association="Self.R_28">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="R_38" Association="Self.R_38">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="REF_FUND_CAMP_DONOR" EntitySet="REF_FUND_CAMP_DONOR" />
+    </AssociationSet>
+    <AssociationSet Name="R_41" Association="Self.R_41">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="Campaign_Detail" EntitySet="Campaign_Detail" />
+    </AssociationSet>
+    <AssociationSet Name="R_33" Association="Self.R_33">
+      <End Role="Donor" EntitySet="Donors" />
+      <End Role="REF_DONOR_FUND" EntitySet="REF_DONOR_FUND" />
+    </AssociationSet>
+    <AssociationSet Name="R_39" Association="Self.R_39">
+      <End Role="Donor" EntitySet="Donors" />
+      <End Role="REF_FUND_CAMP_DONOR" EntitySet="REF_FUND_CAMP_DONOR" />
+    </AssociationSet>
+    <AssociationSet Name="R_29" Association="Self.R_29">
+      <End Role="Expense" EntitySet="Expenses" />
+      <End Role="REF_EXPENSE_PAYMENT" EntitySet="REF_EXPENSE_PAYMENT" />
+    </AssociationSet>
+    <AssociationSet Name="R_32" Association="Self.R_32">
+      <End Role="Fund" EntitySet="Funds" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="R_35" Association="Self.R_35">
+      <End Role="Fund" EntitySet="Funds" />
+      <End Role="REF_DONOR_FUND" EntitySet="REF_DONOR_FUND" />
+    </AssociationSet>
+    <AssociationSet Name="R_36" Association="Self.R_36">
+      <End Role="Fund" EntitySet="Funds" />
+      <End Role="REF_FUND_CAMP_DONOR" EntitySet="REF_FUND_CAMP_DONOR" />
+    </AssociationSet>
+    <AssociationSet Name="R_31" Association="Self.R_31">
+      <End Role="Payment" EntitySet="Payments" />
+      <End Role="REF_EXPENSE_PAYMENT" EntitySet="REF_EXPENSE_PAYMENT" />
+    </AssociationSet>
+    <AssociationSet Name="R_40" Association="Self.R_40">
+      <End Role="PaymentMethod" EntitySet="PaymentMethods" />
+      <End Role="REF_FUND_CAMP_DONOR" EntitySet="REF_FUND_CAMP_DONOR" />
+    </AssociationSet>
+    <AssociationSet Name="REF_CAMP_BLOG" Association="Self.REF_CAMP_BLOG">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="Blog" EntitySet="Blogs" />
+    </AssociationSet>
+    <AssociationSet Name="REF_EMP_GROUP" Association="Self.REF_EMP_GROUP">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Groups" EntitySet="Groups" />
+    </AssociationSet>
+    <AssociationSet Name="REF_GROUPS_ROLE" Association="Self.REF_GROUPS_ROLE">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Role" EntitySet="Roles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

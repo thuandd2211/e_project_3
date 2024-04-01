@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac8d200f478f4222ad8ab02841b87729" Name="Diagram1">
+        <EntityTypeShape EntityType="ngoModel.Blog" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Business" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Campaign" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Campaign_Detail" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Category" Width="1.5" PointX="3.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Donor" Width="1.5" PointX="9" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Employee" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Fund" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Member" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Partner" Width="1.5" PointX="9" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.REF_CAMP_PARTNER" Width="1.5" PointX="11.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.REF_EMP_ROLE" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.REF_FUND_CAMP_DONOR" Width="1.5" PointX="11.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ngoModel.Role" Width="1.5" PointX="3.75" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="ngoModel.R_22" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_44" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_43" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_21" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_23" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_41" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_45" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_51" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_54" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_48" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_52" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_47" ManuallyRouted="false" />
+        <AssociationConnector Association="ngoModel.R_50" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

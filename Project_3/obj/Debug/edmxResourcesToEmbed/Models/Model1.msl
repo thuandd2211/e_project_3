@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ngo_websiteModelStoreContainer" CdmEntityContainer="ngo_websiteEntities1">
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="CurrentTime" ColumnName="CurrentTime" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="Script1" ColumnName="Script1" />
+          <ScalarProperty Name="Img1" ColumnName="Img1" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Script2" ColumnName="Script2" />
+          <ScalarProperty Name="Img2" ColumnName="Img2" />
+          <ScalarProperty Name="Title3" ColumnName="Title3" />
+          <ScalarProperty Name="Script3" ColumnName="Script3" />
+          <ScalarProperty Name="Img3" ColumnName="Img3" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="Introduction" ColumnName="Introduction" />
+          <ScalarProperty Name="BigTitle" ColumnName="BigTitle" />
+          <ScalarProperty Name="Title4" ColumnName="Title4" />
+          <ScalarProperty Name="Script4" ColumnName="Script4" />
+          <ScalarProperty Name="Img4" ColumnName="Img4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Campaigns">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Campaign">
+        <MappingFragment StoreEntitySet="Campaign">
+          <ScalarProperty Name="CampId" ColumnName="CampId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CurrentTime" ColumnName="CurrentTime" />
+          <ScalarProperty Name="CompleteTime" ColumnName="CompleteTime" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="NgoId" ColumnName="NgoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Campaign_Detail">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Campaign_Detail">
+        <MappingFragment StoreEntitySet="Campaign_Detail">
+          <ScalarProperty Name="Camp_DeId" ColumnName="Camp_DeId" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="Script1" ColumnName="Script1" />
+          <ScalarProperty Name="Img1" ColumnName="Img1" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Script2" ColumnName="Script2" />
+          <ScalarProperty Name="Img2" ColumnName="Img2" />
+          <ScalarProperty Name="Title3" ColumnName="Title3" />
+          <ScalarProperty Name="Script3" ColumnName="Script3" />
+          <ScalarProperty Name="Img3" ColumnName="Img3" />
+          <ScalarProperty Name="CampId" ColumnName="CampId" />
+          <ScalarProperty Name="Title4" ColumnName="Title4" />
+          <ScalarProperty Name="Script4" ColumnName="Script4" />
+          <ScalarProperty Name="Img4" ColumnName="Img4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="Script1" ColumnName="Script1" />
+          <ScalarProperty Name="Img1" ColumnName="Img1" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Script2" ColumnName="Script2" />
+          <ScalarProperty Name="Img2" ColumnName="Img2" />
+          <ScalarProperty Name="Title3" ColumnName="Title3" />
+          <ScalarProperty Name="Script3" ColumnName="Script3" />
+          <ScalarProperty Name="Title4" ColumnName="Title4" />
+          <ScalarProperty Name="Script4" ColumnName="Script4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Donors">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Donor">
+        <MappingFragment StoreEntitySet="Donor">
+          <ScalarProperty Name="DonorId" ColumnName="DonorId" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Expense">
+        <MappingFragment StoreEntitySet="Expense">
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funds">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Fund">
+        <MappingFragment StoreEntitySet="Fund">
+          <ScalarProperty Name="FundId" ColumnName="FundId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Group">
+        <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ngoes">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Ngo">
+        <MappingFragment StoreEntitySet="Ngo">
+          <ScalarProperty Name="NgoId" ColumnName="NgoId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="CurrentTime" ColumnName="CurrentTime" />
+          <ScalarProperty Name="CampId" ColumnName="CampId" />
+          <ScalarProperty Name="FundId" ColumnName="FundId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMethods">
+      <EntityTypeMapping TypeName="ngo_websiteModel.PaymentMethod">
+        <MappingFragment StoreEntitySet="PaymentMethod">
+          <ScalarProperty Name="PayMethodId" ColumnName="PayMethodId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_DONOR_FUND">
+      <EntityTypeMapping TypeName="ngo_websiteModel.REF_DONOR_FUND">
+        <MappingFragment StoreEntitySet="REF_DONOR_FUND">
+          <ScalarProperty Name="DonorId" ColumnName="DonorId" />
+          <ScalarProperty Name="FundId" ColumnName="FundId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_EXPENSE_PAYMENT">
+      <EntityTypeMapping TypeName="ngo_websiteModel.REF_EXPENSE_PAYMENT">
+        <MappingFragment StoreEntitySet="REF_EXPENSE_PAYMENT">
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_FUND_CAMP_DONOR">
+      <EntityTypeMapping TypeName="ngo_websiteModel.REF_FUND_CAMP_DONOR">
+        <MappingFragment StoreEntitySet="REF_FUND_CAMP_DONOR">
+          <ScalarProperty Name="FundId" ColumnName="FundId" />
+          <ScalarProperty Name="CampId" ColumnName="CampId" />
+          <ScalarProperty Name="DonorId" ColumnName="DonorId" />
+          <ScalarProperty Name="CurrentTime" ColumnName="CurrentTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="PayMethodId" ColumnName="PayMethodId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ngo_websiteModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="REF_CAMP_BLOG" TypeName="ngo_websiteModel.REF_CAMP_BLOG" StoreEntitySet="REF_CAMP_BLOG">
+      <EndProperty Name="Campaign">
+        <ScalarProperty Name="CampId" ColumnName="CampId" />
+      </EndProperty>
+      <EndProperty Name="Blog">
+        <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="REF_EMP_GROUP" TypeName="ngo_websiteModel.REF_EMP_GROUP" StoreEntitySet="REF_EMP_GROUP">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+      </EndProperty>
+      <EndProperty Name="Groups">
+        <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="REF_GROUPS_ROLE" TypeName="ngo_websiteModel.REF_GROUPS_ROLE" StoreEntitySet="REF_GROUPS_ROLE">
+      <EndProperty Name="Groups">
+        <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+      </EndProperty>
+      <EndProperty Name="Role">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

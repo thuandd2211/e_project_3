@@ -1,0 +1,134 @@
+﻿@model Project_3.Models.Campaign_Detail
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Add", "Campaign", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="add-new-card col-xl-10 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-body p-4">
+
+                        <div class="row">
+                            <div class="numbers">
+                                <h4 class="font-weight-bolder text-center">Add New Data</h4>
+                            </div>
+
+                            <div class="col-10 form-data-card-title ">
+                                <div class="input-form">
+                                    <p class="title">Campaign Name</p>
+                                    <input type="text" name="Name" placeholder="Campaign Name" >
+                                    @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Location</p>
+                                    <input type="text" name="Location" placeholder="Location" >
+                                    @Html.ValidationMessage("Location", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="row">
+                                    <div class="input-form col-3">
+                                        <p class="title">Start Date</p>
+                                        <input type="datetime-local" name="StartTime" >
+                                        @Html.ValidationMessage("StartTime", "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-form col-3">
+                                        <p class="title">End Date</p>
+                                        <input type="datetime-local" name="EndTime" >
+                                        @Html.ValidationMessage("EndTime", "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-form col-3">
+                                        <p class="title">Campaign Type</p>
+                                        @Html.DropDownList("Category", (SelectList)ViewBag.CateItem, new { @class = "select-option" })
+                                        @Html.ValidationMessage("Category", "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-form col-3">
+                                        <p class="title">Employees</p>
+                                        @Html.DropDownList("Employee", (SelectList)ViewBag.EmpItem, new { @class = "select-option" })
+                                        @Html.ValidationMessage("Employee", "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 form-data-card">
+
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 1</p>
+                                    @Html.EditorFor(c => c.Title1)
+                                    @Html.ValidationMessageFor(c => c.Title1, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 1</p>
+                                    @Html.TextAreaFor(c => c.Script1)
+                                    @Html.ValidationMessageFor(c => c.Script1, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 1</p>
+                                    <input type="file" name="img1">
+                                </div>
+
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 2</p>
+                                    @Html.EditorFor(c => c.Title2)
+                                    @Html.ValidationMessageFor(c => c.Title2, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 2</p>
+                                    @Html.TextAreaFor(c => c.Script2)
+                                    @Html.ValidationMessageFor(c => c.Script2, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 2</p>
+                                    <input type="file" name="img2">
+                                </div>
+
+
+                            </div>
+                            <div class="col-6 form-data-card">
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 3</p>
+                                    @Html.EditorFor(c => c.Title3)
+                                    @Html.ValidationMessageFor(c => c.Title3, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 3</p>
+                                    @Html.TextAreaFor(c => c.Script3)
+                                    @Html.ValidationMessageFor(c => c.Script3, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="input-form">
+                                    <p class="title">Image 3</p>
+                                    <input type="file" name="img3">
+                                </div>
+
+                                <div class="input-form">
+                                    <p class="title">Small Campaign Title 4</p>
+                                    @Html.EditorFor(c => c.Title4)
+                                    @Html.ValidationMessageFor(c => c.Title4, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 4</p>
+                                    @Html.TextAreaFor(c => c.Script4)
+                                    @Html.ValidationMessageFor(c => c.Script4, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 4</p>
+                                    <input type="file" name="img4">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-data-button">
+                            <input type="submit" class="add-button" value="Save">
+
+                            <a class="delete-button" href="@Url.Action("Index", "Campaign")">Cancel</a>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

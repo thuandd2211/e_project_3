@@ -1,0 +1,43 @@
+﻿@model Project_3.Models.Fund
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Fund", FormMethod.Post))
+{
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="add-new-card col-xl-10 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="numbers">
+                            <h4 class="font-weight-bolder text-center">Edit Data</h4>
+                        </div>
+                        <div class="col-8 form-data-card-title ">
+                            <div class="input-form">
+                                <p class="title">Name</p>
+                                <input type="text" name="Name" placeholder="Enter Fund Name" value="@Model.Name">
+                                @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-form">
+                                <p class="title">Description</p>
+                                <textarea name="Description" placeholder="Enter Fund Description">@Model.Description</textarea>
+                                @Html.ValidationMessage("Description", "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="form-data-button">
+                            <button type="submit" class="add-button">Save</button>
+
+                            <a class="delete-button" href="@Url.Action("Index","Fund")">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

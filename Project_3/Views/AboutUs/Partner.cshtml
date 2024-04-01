@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Project_3.Models.Partner>
+@{
+    ViewBag.Title = "Partner";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="slider">
+    <div class="item">
+        <div class="slider-img"><img src="~/images/user_img/background/1.jpg" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                    <div class="animated bounceInDown slider-captions background-text">
+                        <h1 class="slider-title">Our Partners</h1>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--  ************************* VNese partner Starts Here ************************** -->
+
+<div class="our-partner container-fluid">
+    <div class="container">
+        <h1 class="text-center">OUR PARTNERS</h1>
+        <div class="row  text-part">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3" style="text-align: justify;">
+                    @if (item.Image != null)
+                    {
+                        <img src="data:image; base64, @System.Convert.ToBase64String(item.Image)" class="" alt="...">
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

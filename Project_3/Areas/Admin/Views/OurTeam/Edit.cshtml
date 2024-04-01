@@ -1,0 +1,52 @@
+﻿@model Project_3.Models.Member
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "OurTeam", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="add-new-card col-xl-10 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="numbers">
+                            <h4 class="font-weight-bolder text-center">Edit Data</h4>
+                        </div>
+                        <div class="col-8 form-data-card-title ">
+                            <div class="input-form">
+                                <p class="title">Name</p>
+                                <input type="text" placeholder="Enter Name Member" name="FullName" value="@Model.FullName">
+                                @Html.ValidationMessage("FullName", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-form">
+                                <p class="title">Profession</p>
+                                @Html.DropDownListFor(m => m.BusinessId, (SelectList)ViewBag.BusiItem, new { @class = "select-option" })
+                                @Html.ValidationMessage("BusinessId", "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="input-form">
+                                <p class="title">Biography</p>
+                                <textarea type="text" placeholder="Enter Biography" name="Biography">@Model.Biography</textarea>
+                                @Html.ValidationMessage("Biography", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-form">
+                                <p class="title">Profile Picture</p>
+                                <input type="file" name="Img">
+                                @Html.ValidationMessage("Image", "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-data-button">
+                            <input type="submit" class="add-button" value="Save">
+
+                            <a class="delete-button" href="@Url.Action("Index", "OurTeam")">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

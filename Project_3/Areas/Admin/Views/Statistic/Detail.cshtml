@@ -1,0 +1,95 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Project_3.Models.REF_FUND_CAMP_DONOR>
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-xl-12 col-sm-6 mb-xl-0 mb-4">
+            <div class="card add-new-card">
+                <div class="card-body p-4 row">
+
+                    <div class="numbers">
+                        <h4 class="font-weight-bolder text-center">Donor Detail</h4>
+                    </div>
+                   
+                    <div class="search-box col-4 mt-3 mb-3">
+                        @using (Html.BeginForm("Detail", "Statistic", FormMethod.Get))
+                        {
+                            <input type="datetime-local" class="input-date" name="FirstTime" value="@ViewBag.FirstTime">
+                            <input type="datetime-local" class="input-date" name="LastTime" value="@ViewBag.LastTime">
+                            <input type="text" class="search-box-input" name="search" placeholder="Enter Campaign" value="@ViewBag.CampName">
+                            <button type="submit" class="fas fa-search search-btn"></button>
+                        }
+                    </div>
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+
+
+                        <div class="card shadow mb-4">
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%"
+                                           cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Fund</th>
+                                                <th>Campaign</th>
+                                                <th>Amount</th>
+                                                <th>Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model.Any())
+                                            {
+                                                foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>@item.Fund.Name</td>
+                                                        <td>@item.Campaign.Name</td>
+                                                        <td>@item.Amount</td>
+                                                        <td>@item.CurrentTime</td>
+                                                    </tr>
+                                                    <tr></tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="4" style="text-align:center; font-size:large;">
+                                                        <b>No Data</b>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="4" style="text-align:center; font-size:large;">
+                                                    <b>Total: @ViewBag.Total</b>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="center">
+                                    <div class="pagination">
+                                        @Html.PagedListPager(Model, p => Url.Action("Detail", new { page = p, currentF = ViewBag.FirstTime, currentL = ViewBag.LastTime, currentFilter = ViewBag.CampName }))
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

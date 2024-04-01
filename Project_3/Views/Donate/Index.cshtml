@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row donate-body">
+        <div class="col-md-10 donate-left-content">
+            <div class="donate-detail">
+                <div class="donate-title-1">
+                    <h5>Donate</h5>
+                </div>
+                <div class="row donate-content">
+                    <div class="col-md-6 donate-img">
+                        <img src="~/images/user_img/donate/donate-img-1.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 donate-text">
+                        <p>
+                            Donate to Ngo charitables Now
+                            Ngo charitables lessons are fun, hands-on and are effective at teaching kids STEM.
+                            We
+                            also make sure that the materials are available in their locality so teachers can
+                            easily
+                            incorporate the activities in their classrooms.
+
+                            Your donation will help us continue our programs and start new ones that are
+                            requested
+                            by our partners on the ground.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            @using (Html.BeginForm("Index", "Donate", FormMethod.Post))
+            {
+                <div class="donate-detail">
+                    <div class="donate-title">
+                        <h5>Donation Details</h5>
+                    </div>
+                    <div class="donate-content">
+                        <h5>Donation ammount</h5>
+
+                        <div class="row ammount-group">
+                            <div class="ammount-group-option">
+                                <input type="radio" name="opt" id="1" value="10.0" checked="checked">
+                                <label for="1">10$</label>
+                            </div>
+                            <div class="ammount-group-option">
+                                <input type="radio" name="opt" id="2" value="20.0">
+                                <label for="2">20$</label>
+                            </div>
+                            <div class="ammount-group-option">
+                                <input type="radio" name="opt" id="3" value="30.0">
+                                <label for="3">30$</label>
+                            </div>
+                            <div class="ammount-group-option">
+                                <input type="radio" name="opt" id="4" value="40.0">
+                                <label for="4">40$</label>
+                            </div>
+                        </div>
+                        <input class="cus-ammount-right" type="text" placeholder="Custom Ammount" name="Amount">
+                        @Html.ValidationMessage("Amount", "", new { @class = "text-danger" })
+                        <div class="checkbox-form">
+
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <h5>Fund</h5>
+                                @Html.DropDownList("FundId", (SelectList)ViewBag.FundItem, new { @class = "select-campaign-box" })
+                            </div>
+                            <div class="col-5">
+                                <h5>Campaign</h5>
+                                @Html.DropDownList("CampId", (SelectList)ViewBag.CampItem, new { @class = "select-campaign-box" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="donate-title">
+                    <h5>Payment Information</h5>
+                </div>
+                <div class="donate-detail">
+
+                    <div class="row donate-content">
+                        <div class="col-md-8 secure-payment">
+                            <h5>Secure Payment</h5>
+                            <br />
+                            <div class="payment-input">
+                                <input type="number" name="CreditNumber">
+                                @Html.ValidationMessage("CreditNumber", "", new { @class = "text-danger" })
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="input-ph">Credit Card Number</label>
+                            </div>
+
+                            <div class="payment-input">
+                                <input type="text" name="ExpDate">
+                                @Html.ValidationMessage("ExpDate", "", new { @class = "text-danger" })
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="input-ph">Expiration Date</label>
+                            </div>
+
+                            <div class="payment-input">
+                                <input type="text" name="CVV">
+                                @Html.ValidationMessage("CVV", "", new { @class = "text-danger" })
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="input-ph">CVV</label>
+                            </div>
+
+                            <div class="payment-input">
+                                <input type="text" name="CardName">
+                                @Html.ValidationMessage("CardName", "", new { @class = "text-danger" })
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="input-ph">Name On Card</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="credit-card-img" src="~/images/user_img/icon/credit-cards.png" alt="">
+                            <img class="credit-card-img" src="~/images/user_img/icon/shopping.png" alt="">
+                        </div>
+                        <div>
+                            <input class="btn-donate" type="submit" value="Donate" id="myButton">
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<script>
+var button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+  alert('Thank you for donate, please check mail to complete donate!');
+});
+</script>
+
+
+

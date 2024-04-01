@@ -1,0 +1,65 @@
+﻿@model Project_3.Models.Donor
+@{
+    ViewBag.Title = "EditAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="body-account">
+    <div class="container">
+        <h1>Settings</h1>
+        <div class="row card-account">
+            
+            <div class="col-md-9 col-xl-9 bo-content">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="account" role="tabpanel">
+                        <div class="card account">
+                            <div class="card-header">
+                                <h4 class="card-title mb-0">Account Information</h4>
+                            </div>
+                            <div class="card-body">
+                                @using (Html.BeginForm("EditAccount", "Login", FormMethod.Post, new { @class = "content-account" }))
+                                {
+                                    <div class="row">
+                                        <div class="form-account col-md-10">
+                                            <label for="inputUsername">Username</label>
+                                            <input type="text" class="form-control" name="Username"
+                                                   placeholder="Username" value="@Model.Username" readonly>
+                                        </div>
+                                        <div class="form-account col-md-10">
+                                            <label for="inputFirstName">Full name</label>
+                                            <input type="text" class="form-control" name="Fullname"
+                                                   placeholder="Full name" value="@Model.Fullname">
+                                            @Html.ValidationMessage("Fullname", "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-account col-md-5">
+                                            <label for="Birthday">Birthday</label>
+                                            <input type="date" class="form-control" name="Birthday"
+                                                   value="@Html.DisplayFor(d => d.Birthday)">
+                                            @Html.ValidationMessage("Birthday", "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-account col-md-10">
+                                            <label for="inputEmail4">Email</label>
+                                            <input type="email" class="form-control" name="Email"
+                                                   placeholder="Email" value="@Model.Email">
+                                            @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-account col-md-10">
+                                            <label for="inputEmail4">Phone Number</label>
+                                            <input type="text" class="form-control" name="Phone"
+                                                   placeholder="Phone" value="@Model.Phone">
+                                            @Html.ValidationMessage("Phone", "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <input class="btn-account" type="submit" value="Save Change">
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

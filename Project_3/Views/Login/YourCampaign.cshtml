@@ -1,0 +1,111 @@
+﻿@using PagedList.Mvc;
+@model IEnumerable<Project_3.Models.REF_FUND_CAMP_DONOR>
+@{
+    ViewBag.Title = "YourCampaign";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.donor = Model.GroupBy(x => x.CampId).Select(camp => new
+    {
+        CampId = camp.Key,
+        Total = camp.Sum(m => m.Amount)
+    }).ToList();
+}
+
+<div class="body-account">
+    <div class="container">
+        <h1>Settings</h1>
+        <div class="row card-account">
+            @*<div class="col-md-2 col-xl-2">
+                <div class="card-profile">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Profile</h5>
+                    </div>
+                    <div class="list-group list-group-flush" role="tablist">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="@Url.Action("EditAccount","Login")"
+                           role="tab">
+                            Your Campaign
+                        </a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="@Url.Action("YourCampaign","Login")"
+                           role="tab">
+                            Account Information
+                        </a>
+                    </div>
+                </div>
+            </div>*@
+            <div class="col-md-12 col-xl-12 bo-content">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="account" role="tabpanel">
+                        <div class="card account">
+                            <div class="card-header">
+                                <h4 class="card-title mb-0 center">Your Campaign</h4>
+                            </div>
+                            <div class="container-search">
+                                <div class="row height-search d-flex justify-content-center align-items-center">
+                                    <div class="col-md-6 search-bar">
+                                        <div class="form-search">
+                                            @using (Html.BeginForm("YourCampaign", "Login", FormMethod.Get))
+                                            {
+                                                <input type="text" class="form-control search form-input" placeholder="Search Campaign Name" name="search">
+                                                <button type="submit" class="fa fa-search search-btn" style="border: none"></button>
+                                            }
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                               
+                            <section class="your_campaign">
+                                <div class="container">
+
+                                    <div class="campaign-row row">
+                                        @if (ViewBag.donor != null)
+                                        {
+                                            foreach (var donor in ViewBag.donor)
+                                            {
+                                                foreach (var item1 in Model)
+                                                {
+                                                    if (donor.CampId == item1.CampId)
+                                                    {
+                                                        <div class="col-md-4 col-sm-4">
+                                                            <div class="single-your_campaign">
+                                                                <figure>
+                                                                    @if (item1.Campaign.Campaign_Detail.ElementAt(0).Img1 != null)
+                                                                    {
+                                                                        <img src="data:image; base64, @System.Convert.ToBase64String(item1.Campaign.Campaign_Detail.ElementAt(0).Img1)" />
+                                                                    }
+
+                                                                </figure>
+                                                                <div class="your_campaign">
+                                                                    <small class="your_campaign small">
+                                                                        <span style="font-weight: bold;">Infomation:</span>@item1.Campaign.StartTime/@item1.Campaign.Location
+                                                                    </small>
+                                                                    <h4 class="your_campaign h4">@item1.Campaign.Name</h4>
+                                                                    <p class="campaign-paragraph"><strong>Your Donation:</strong> @donor.Total $</p>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        break;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+
+
+
+                                    </div>
+                                </div>
+                                @*<div class="center">
+                <div class="pagination">
+                    @Html.PagedListPager(Model, p => Url.Action("YourCampaign", new { page = p, currentFilter = ViewBag.CurrentFilter }))
+                </div>
+            </div>*@
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-xl-10 col-sm-6 mb-xl-0 mb-4">
+            <div class="card add-new-card">
+                <div class="card-body p-4">
+                    <div class="row">
+                        <div class="numbers">
+                            <h4 class="font-weight-bolder text-center">Add New Data</h4>
+                        </div>
+                        @using (Html.BeginForm("Add", "OurWork", FormMethod.Post, new {enctype="multipart/form-data"}))
+                        {
+                            <div class="col-12 form-data-card-title ">
+                                <div class="input-form">
+                                    <p class="title">Our Work Title</p>
+                                    <input type="text" name="Name" placeholder="Title">
+                                    @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                            <div class="col-12 form-data-card">
+                                <div class="input-form">
+                                    <p class="title">Small Our Work Title 1</p>
+                                    <input type="text" name="Title1" placeholder="Small Title 1" />
+                                    @Html.ValidationMessage("Title1", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 1</p>
+                                    <textarea type="text" placeholder="Enter your description" name="Script1"></textarea>
+                                    @Html.ValidationMessage("Script1", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 1</p>
+                                    <input type="file" name="img1">
+                                    @Html.ValidationMessage("Image", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Small Our Work Title 2</p>
+                                    <input type="text" name="Title2" placeholder="Small Title 2" />
+                                    @Html.ValidationMessage("Title2", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 2</p>
+                                    <textarea type="text" placeholder="Enter your description" name="Script2"></textarea>
+                                    @Html.ValidationMessage("Script2", "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                                <div class="col-12 form-data-card">
+                                    <div class="input-form">
+                                        <p class="title">Small Our Work Title 3</p>
+                                        <input type="text" name="Title3" placeholder="Small Title 3" />
+                                        @Html.ValidationMessage("Title3", "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-form">
+                                        <p class="title">Paragraph 1</p>
+                                        <textarea type="text" placeholder="Enter your description" name="Script3"></textarea>
+                                        @Html.ValidationMessage("Script3", "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-data-button">
+                                    <button type="submit" class="add-button">Save</button>
+                                    <a class="delete-button" href="@Url.Action("Index","OurWork")" >Cancel</a>
+                                </div>     
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

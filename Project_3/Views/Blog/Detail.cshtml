@@ -1,0 +1,60 @@
+﻿@model Project_3.Models.Blog
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 blog-detail-body">
+            <div class="content-detail">
+                <h6 class="blog-detail-h6">@Model.CurrentTime</h6>
+                <h1 class="blog-detail-h1" id="postTitle">@Model.Name</h1>
+            </div>
+            <h5 class="blog-detail-h5">@Model.Title1</h5>
+            <div class="blog-detail-img-contain">
+                @if (Model.Img1 != null)
+                {
+                    <img class="blog-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img1)" />
+                }
+            </div>
+            <p class="blog-detail-p">
+                @Model.Script1
+            </p>
+            <h5 class="blog-detail-h5">@Model.Title2</h5>
+            <div class="blog-detail-img-contain">
+                @if (Model.Img2 != null)
+                {
+                    <img class="blog-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img2)" />
+                }
+            </div>
+
+            <p class="blog-detail-p">
+                @Model.Script2
+            </p>
+            <h5 class="blog-detail-h5">@Model.Title3</h5>
+            <div class="blog-detail-img-contain">
+                @if (Model.Img3 != null)
+                {
+                    <img class="blog-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img3)" />
+                }
+            </div>
+            
+            <p class="blog-detail-p">
+                @Model.Script3
+            </p>
+            <h5 class="blog-detail-h5">@Model.Title4</h5>
+            <div class="blog-detail-img-contain">
+                @if (Model.Img4 != null)
+                {
+                    <img class="blog-detail-img" src="data:image; base64, @System.Convert.ToBase64String(Model.Img4)" />
+                }
+            </div>
+            
+            <p class="blog-detail-p">
+                @Model.Script4
+            </p>
+        </div>
+    </div>
+</div>
+

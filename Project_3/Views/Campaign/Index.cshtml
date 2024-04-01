@@ -1,0 +1,95 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Project_3.Models.Campaign_Detail>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="slider">
+    <div class="item">
+        <div class="slider-img"><img src="~/images/user_img/background/1.jpg" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                    <div class="animated bounceInDown slider-captions background-text">
+                        <h1 class="slider-title">Our Campaign</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="campaign-body">
+    <div class="introduction-content">
+        <div class="container introduction-body">
+            <div>
+                <h1 class="introduction-title">Introduction Text</h1>
+            </div>
+            <div class="introduction-paragraph">
+                <p>
+                    Welcome to the heart of change, where every donation, big or small, makes a world of difference.
+                    Meet NGO Charitables, a dynamic organization with a big vision and an even bigger heart. Despite
+                    our modest size, we're fueled by a passion for creating positive impact in the lives of those
+                    who need it most. Through our carefully curated campaigns, we strive to address pressing social
+                    issues, empower communities, and foster sustainable change. Join us on this journey of
+                    compassion and generosity as we work together to build a brighter future for all. Together,
+                    let's make every donation count with NGO Charitables.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-search">
+        <div class="row height-search d-flex justify-content-center align-items-center">
+            <div class="col-md-6 search-bar">
+                <div class="form-search">
+                    @using (Html.BeginForm("Index", "Campaign", FormMethod.Get))
+                    {
+                        <input type="text" class="form-control search form-input" placeholder="Search Campaign Name" name="search">
+                        <button type="submit" class="fa fa-search search-btn" style="border: none"></button>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="row campaign">
+                <div class="col-md-7">
+                    <h2><a class="campaign-title" href="/Campaign/Detail/@item.CampId">@item.Campaign.Name</a></h2>
+                    <p class="campaign-small-title"><span style="font-weight: bold;">Date:</span>@item.Campaign.StartTime - @item.Campaign.EndTime</p>
+                    <p class="campaign-small-title">
+                        <span style="font-weight: bold;">Location:</span> @item.Campaign.Location
+                    </p>
+                    <p class="campaign-paragraph">
+                        @item.Script1;
+                    </p>                   
+                    <div>
+                        <a class="read-more" href="/Campaign/Detail/@item.CampId">
+                            Read more<i class="fa fa-angle-right read-more-icon"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-5 campaign-img polaroid">
+                    @if (item.Img1 != null)
+                    {
+                        <img src="data:image; base64, @System.Convert.ToBase64String(item.Img1)">
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    <div class="center">
+        <div class="pagination">
+            @Html.PagedListPager(Model, p => Url.Action("Index", new { page = p, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,94 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Project_3.Models.REF_CAMP_PARTNER>
+@{
+    ViewBag.Title = "PartnerOfCampaign";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-xl-12 col-sm-6 mb-xl-0 mb-4">
+            <div class="card add-new-card">
+                <div class="card-body p-4 row">
+
+                    <div class="numbers">
+                        <h4 class="font-weight-bolder text-center">Partner Data</h4>
+                    </div>
+                    <div class="col-8">
+                        @Html.ActionLink("Add", "AddPartnerToCampaign", "Campaign", new { area = "Admin", id = @ViewBag.CampId }, new { @class = "add-button" })
+                        @Html.ActionLink("Back", "", "Campaign", new { area = "Admin" }, new { @class = "add-button" })
+                    </div>
+                    <div class="search-box col-4 mt-3 mb-3">
+                        @using (Html.BeginForm("PartnerOfCampaign", "Campaign", FormMethod.Get))
+                        {
+                            <input type="text" class="search-box-input" name="search" id="search" placeholder="Enter Partner Name,Phone,Email">
+                            <button type="submit" class="fas fa-search search-btn"></button>
+                        }
+                    </div>
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+
+
+                        <div class="card shadow mb-4">
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%"
+                                           cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Partner Name</th>
+                                                <th>Image</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model.Any())
+                                            {
+                                                foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>@item.Partner.Name</td>
+                                                        <td>
+                                                            @if (item.Partner.Image != null)
+                                                            {
+                                                                <img src="data:image; base64, @System.Convert.ToBase64String(item.Partner.Image)" style="width:100px;" />
+                                                            }
+                                                        </td>
+                                                        <td>
+                                                            @Html.ActionLink("Delete", "DeletePartnerOfCampaign", "Campaign", new { area = "Admin", id = item.CampId, partnerId = item.PartnerId }, new { @class = "btn blue bigsize f16b h51" })
+                                                        </td>
+                                                    </tr>
+                                                    <tr></tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="3" style="text-align:center; font-size:large;">
+                                                        <b>No Data</b>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="center">
+                                    <div class="pagination">
+                                        @Html.PagedListPager(Model, p => Url.Action("PartnerOfCampaign", new { page = p, currentFilter = ViewBag.CurrentFilter }))
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container-sign">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="back">
+                <img src="~/images/user_img/signin_signup/anh1.jpg" alt="">
+            </div>
+            <div class="front">
+                <img src="~/images/user_img/signin_signup/anh2.jpg" alt="">
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+
+                <div class="signup-form">
+                    <div class="title">Register</div>
+                    @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+                    {
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Enter your Username" name="Username">
+                                @Html.ValidationMessage("Username", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Enter your password" name="Password">
+                                @Html.ValidationMessage("Password", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Enter your Fullname" name="Fullname">
+                                @Html.ValidationMessage("Fullname", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" placeholder="Enter your email" name="Email">
+                                @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-phone"></i>
+                                <input type="text" placeholder="Enter your phone" name="Phone">
+                                @Html.ValidationMessage("Phone", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" placeholder="Enter your birthday" name="Birthday">
+                                @Html.ValidationMessage("Birthday", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="button input-box">
+                                <input type="submit" value="Register">
+                            </div>
+                            <div class="text sign-up-text">Already have an account? <a style="color: limegreen" href="@Url.Action("Index","Login")">Login Now</a></div>
+                        </div>
+                        }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="add-new-card col-xl-10 col-sm-6 mb-xl-0 mb-4">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="numbers">
+                        <h4 class="font-weight-bolder text-center">Add New Data</h4>
+                    </div>
+                    @using (Html.BeginForm("Add", "Partner", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="col-8 form-data-card-title ">
+                            <div class="input-form">
+                                <p class="title">Partner Name</p>
+                                <input type="text" name="Name" placeholder="Enter Partner Name">
+                                @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-form">
+                                <p class="title">Email</p>
+                                <input type="email" name="Email" placeholder="Enter Partner Email">
+                                @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-form">
+                                <p class="title">Address</p>
+                                <input type="text" name="Address" placeholder="Enter Partner Address">
+                                @Html.ValidationMessage("Address", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-form">
+                                <p class="title">Phone number</p>
+                                <input type="text" name="Phone" placeholder="Enter Partner Phone">
+                                @Html.ValidationMessage("Phone", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-form">
+                                <p class="title">Logo</p>
+                                <input type="file" name="Image">
+                                @Html.ValidationMessage("Image", "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-data-button">
+                                <button class="add-button" type="submit">Save</button>
+                                <a class="delete-button" href="@Url.Action("Index","Partner")">Cancel</a>
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

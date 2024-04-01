@@ -1,0 +1,82 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Project_3.Models.Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="slider">
+    <div class="item">
+        <div class="slider-img"><img src="~/images/user_img/background/1.jpg" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                    <div class="animated bounceInDown slider-captions background-text">
+                        <h1 class="slider-title">Our Blog</h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ################# Our Blog Starts Here#######################--->
+
+<section class="our-blog">
+    <div class="container">
+
+        <div class="search-blog">
+            <div class="row height-search d-flex justify-content-center align-items-center">
+                <div class="col-md-6 search-bar">
+                    <div class="form-search">
+                        @using (Html.BeginForm("Index", "Blog", FormMethod.Get))
+                        {
+                            <input type="text" class="form-control search form-input" placeholder="Search Campaign Name" name="search">
+                            <button type="submit" class="fa fa-search search-btn" style="border: none"></button>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="blog-row row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog">
+                        <figure>
+                            @if (item.Img1 != null)
+                            {
+                                <img src="data:image; base64, @System.Convert.ToBase64String(item.Img1)" class="img-top">
+                            }                           
+                        </figure>
+                        <div class="blog-detail">
+                            <small>@item.CurrentTime</small>
+                            <h4>@item.Name</h4>
+                            <div class="blog-contain">
+                                <p class="blog-text-card">
+                                    @item.Script1
+                                </p>
+                             </div>
+                                <div class="link">
+                                    <a href="/Blog/Detail/@item.BlogId">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                </div>
+            }
+
+
+        </div>
+
+        <div class="center">
+            <div class="pagination">
+                @Html.PagedListPager(Model, p => Url.Action("Index", new { page = p, currentFilter = ViewBag.CurrentFilter }))
+            </div>
+        </div>
+</section>
+

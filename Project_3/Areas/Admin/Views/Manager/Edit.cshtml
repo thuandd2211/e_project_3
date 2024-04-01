@@ -1,0 +1,54 @@
+﻿@model Project_3.Models.Employee
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Manager", FormMethod.Post))
+{
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="add-new-card col-xl-10 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="numbers">
+                            <h4 class="font-weight-bolder text-center">Edit Data</h4>
+                        </div>
+                        <div class="col-8 form-data-card-title ">
+                            <div class="input-form">
+                                <div class="input-form">
+                                    <p class="title">Full Name</p>
+                                    <input type="text" placeholder="Enter your full name" name="Fullname" value="@Model.Fullname">
+                                    @Html.ValidationMessage("Fullname", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Email</p>
+                                    <input type="email" placeholder="abc@example.com" name="Email" value="@Model.Email">
+                                    @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Date of Birth</p>
+                                    <input type="date" name="Birthday" value="@Html.DisplayFor(c => c.Birthday)">
+                                    @Html.ValidationMessage("Birth", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Phone number</p>
+                                    <input type="number" placeholder="+09example" name="Phone" value="@Model.Phone">
+                                    @Html.ValidationMessage("Phone_number", "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                            <div class="form-data-button">
+                                <button type="submit" class="add-button">Save</button>
+
+                                <a class="delete-button" href="@Url.Action("Index","Manager")">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

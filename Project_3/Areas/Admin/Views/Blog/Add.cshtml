@@ -1,0 +1,113 @@
+﻿@model Project_3.Models.Blog
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Add", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-xl-10 col-sm-6 mb-xl-0 mb-4">
+                <div class="card add-new-card">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="numbers">
+                                <h4 class="font-weight-bolder text-center">Add New Data</h4>
+                            </div>
+                            <div class="col-8 form-data-card-title ">
+                                <div class="input-form">
+                                    <p class="title">Blog Name</p>
+                                    <input type="text" name="Name" placeholder="Enter Blog Name">
+                                    @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Date</p>
+                                    <input type="datetime-local" name="CurrentTime">
+                                    @Html.ValidationMessage("CurrentTime", "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-form col-8">
+                                    <p class="title">Campaign</p>
+                                    @Html.DropDownList("CampId", (SelectList)ViewBag.CampItem, new { @class = "select-option" })
+                                    @Html.ValidationMessage("CampId", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form col-4">
+                                    <p class="title">Employees</p>
+                                    @Html.DropDownList("EmpId", (SelectList)ViewBag.EmpItem, new { @class = "select-option" })
+                                    @Html.ValidationMessage("EmpId", "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 form-data-card">
+
+                                <div class="input-form">
+                                    <p class="title">Small Blog Title 1</p>
+                                    <input type="text" name="Title1" placeholder="Enter Blog Title 1">
+                                    @Html.ValidationMessage("Title1", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 1</p>
+                                    <textarea type="text" name="Script1" placeholder="Enter Script 1"></textarea>
+                                    @Html.ValidationMessage("Script1", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Blog Title 2</p>
+                                    <input type="text" name="Title2" placeholder="Enter Blog Title 2">
+                                    @Html.ValidationMessage("Title2", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 2</p>
+                                    <textarea type="text" name="Script2" placeholder="Enter Script 2"></textarea>
+                                    @Html.ValidationMessage("Script2", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 1</p>
+                                    <input type="file" name="Img1">
+                                    <p class="title">Image 2</p>
+                                    <input type="file" name="Img2">
+                                </div>
+                            </div>
+                            <div class="col-6 form-data-card">
+                                <div class="input-form">
+                                    <p class="title">Blog Title 3</p>
+                                    <input type="text" name="Title3" placeholder="Enter Blog Title 3">
+                                    @Html.ValidationMessage("Title3", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 3</p>
+                                    <textarea type="text" name="Script3" placeholder="Enter Script 3"></textarea>
+                                    @Html.ValidationMessage("Script3", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Blog Title 4</p>
+                                    <input type="text" name="Title4" placeholder="Enter Blog Title 4">
+                                    @Html.ValidationMessage("Title4", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Paragraph 4</p>
+                                    <textarea type="text" name="Script4" placeholder="Enter Script 4"></textarea>
+                                    @Html.ValidationMessage("Script4", "", new { @class = "text-danger" })
+                                </div>
+                                <div class="input-form">
+                                    <p class="title">Image 3</p>
+                                    <input type="file" name="Img3">
+                                    <p class="title">Image 4</p>
+                                    <input type="file" name="Img4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-data-button">
+                            <input type="submit" class="add-button" value="Save">
+
+                            <a class="delete-button" href="@Url.Action("Index", "Blog")">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+}
